@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masruk Habib's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="home" class="section">
-    <div class="container">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Your introduction or tagline here.</p>
-    </div>
-  </section>
+    <header>
+        <h1>Masruk Habib</h1>
+        <p>Student</p>
+        <nav>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('experience')">Experience</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('publications')">Publications</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </nav>
+    </header>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>A brief introduction about yourself, your background, and your interests.</p>
-    </div>
-  </section>
+    <section id="intro">
+        <img src="MyPhoto.jpg" alt="Masruk Habib">
+        <div>
+            <h2>I'm Masruk Habib, a Content Writer and Editor.</h2>
+            <p>Masruk Habib is a Computer Engineering student attending Marwadi University, Rajkot, Gujarat, India.</p>
+        </div>
+    </section>
 
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Skill 1</li>
-        <li>Skill 2</li>
-        <li>Skill 3</li>
-        <li>Skill 4</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Content Sections -->
+    <section id="about" class="content-section">
+        <h2>About</h2>
+        <p>
+          As a Programming and research enthusiast and computer engineering student, I am passionate about building innovative solutions. I am highly motivated to continuously improve my skills and knowledge, and I am always curious about learning new technologies. Committed to staying up-to-date with the latest industry trends, I am eager to apply my technical expertise and creativity to real-world challenges. </p>
+    </section>
 
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-      <p>Outline your work experience, with company names, roles, and dates.</p>
-    </div>
-  </section>
+    <section id="skills" class="content-section">
+        <h2>Skills</h2>
+        <p>List of skills and competencies.</p>
+    </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <p>Highlight your key projects with descriptions and links if applicable.</p>
-    </div>
-  </section>
+    <section id="experience" class="content-section">
+        <h2>Experience</h2>
+        <p>Details of professional experience and internships.</p>
+    </section>
 
-  <section id="publications" class="section">
-    <div class="container">
-      <h2>Publications</h2>
-      <p>List any publications or significant written work.</p>
-    </div>
-  </section>
+    <section id="projects" class="content-section">
+        <h2>Projects</h2>
+        <p>Description of major projects and contributions.</p>
+    </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Get in touch through social media or email.</p>
-    </div>
-  </section>
+    <section id="publications" class="content-section">
+        <h2>Publications</h2>
+        <p>List of publications, articles, or papers written by Masruk.</p>
+    </section>
 
-  <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
-  </footer>
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>Contact details or a contact form.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Masruk Habib. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
