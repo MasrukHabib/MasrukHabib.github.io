@@ -125,3 +125,17 @@ document
     el.style.opacity = "0";
     observer.observe(el);
   });
+
+// Delay for fade-out
+section.style.opacity = "0";
+setTimeout(() => {
+  section.style.display = "none";
+}, 300); // Adjust this delay to control fade-out speed
+
+// Delay for fade-in
+setTimeout(() => {
+  selectedSection.style.display = "block";
+  setTimeout(() => {
+    selectedSection.style.opacity = "1";
+  }, 50); // Adjust this delay to control when the opacity starts
+}, 300); // Adjust this delay to control fade-in speed

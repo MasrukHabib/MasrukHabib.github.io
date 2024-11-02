@@ -1,159 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+
+  <body>
     <header>
-        <h1>Masruk Habib</h1>
-        <p>Computer Engineering Student</p>
-        <nav>
-            <button onclick="showSection('about')">About</button>
-            <button onclick="showSection('education')">Education</button>
-            <button onclick="showSection('skills')">Skills</button>
-            <button onclick="showSection('experience')">Experience</button>
-            <button onclick="showSection('projects')">Projects</button>
-            <button onclick="showSection('publications')">Publications</button>
-            <button onclick="showSection('contact')">Contact</button>
-        </nav>
+      <h1>Masruk Habib</h1>
+      <p>Computer Engineering Student</p>
+      <nav>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('education')">Education</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('experience')">Experience</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('publications')">Publications</button>
+        <button onclick="showSection('contact')">Contact</button>
+      </nav>
     </header>
 
     <section id="intro">
-        <img src="MyPhoto.jpg" alt="Masruk Habib">
-        <div>
-            <h2>I'm Masruk Habib, a Content Writer and Editor.</h2>
-            <p>Computer Engineering student at Marwadi University, Rajkot, Gujarat, India. Passionate about programming and research, always eager to learn and create innovative solutions.</p>
-        </div>
+      <img src="MyPhoto.jpg" alt="Masruk Habib" />
+      <div>
+        <h2>Hi, I’m Masruk Habib – Driven by Innovation, Guided by Technology.</h2>
+        <!-- <p>
+          Computer Engineering student at Marwadi University, Rajkot, Gujarat,
+          India. Passionate about programming and research, always eager to
+          learn and create innovative solutions.
+        </p> -->
+      </div>
     </section>
 
-<!-- about start -->
+    <!-- about start -->
     <section id="about" class="content-section">
-        <h2>About Me</h2>
-        <p>As a Programming and research enthusiast and computer engineering student, I am passionate about building innovative solutions. I am highly motivated to continuously improve my skills and knowledge, and I am always curious about learning new technologies. Committed to staying up-to-date with the latest industry trends, I am eager to apply my technical expertise and creativity to real-world challenges.</p>
+      <h2>About Me</h2>
+      <p>
+        As a programming and research enthusiast pursuing a B.Tech in Computer
+        Engineering, I am deeply committed to building innovative solutions that
+        solve real-world problems. My journey in technology is marked by a
+        strong drive for continuous learning, skill enhancement, and a deep
+        curiosity about emerging technologies. I bring experience in languages
+        like C, C++, Java, Python, and Node.JS, which I've leveraged to develop
+        diverse projects, from web applications to mobile apps. My passion for
+        AI and machine learning has led me to explore TensorFlow, a powerful
+        tool for building deep learning models. I am also proficient in web
+        technologies like HTML, CSS, and JavaScript, which I've used to create
+        responsive websites that showcase my skills and projects. Beyond
+        technical projects, I have dedicated time to research, contributing to
+        published works that explore novel ideas and push the boundaries of
+        technology. Staying informed about industry trends is essential to me,
+        as it fuels my creativity and empowers me to tackle challenges in fresh,
+        impactful ways. I am excited to collaborate on projects that make a
+        difference, bringing both my technical expertise and problem-solving
+        mindset to any opportunity that supports meaningful progress in computer
+        engineering and software development.
+      </p>
     </section>
-<!-- about end -->
 
+    <!-- Education -->
     <section id="education" class="content-section">
-        <h2>Education</h2>
-        <div class="education-entry">
-            <h3>
-                <strong>Marwadi University, Computer Engineering</strong>
-                <span class="date">Sept 2021 – May 2025</span>
-            </h3>
-            <ul>
-                <li><strong>GPA:</strong> 8.58/10 (Transcript)</li>
-                <li><strong>Coursework:</strong> Computer Architecture, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory</li>
-            </ul>
-        </div>
-        <div class="education-entry">
-            <h3>
-                <strong>Shakiso Secondary and Preparatory School</strong>
-                <span class="date">Sept 2016 – Mar 2021</span>
-            </h3>
-            <ul>
-                <li><strong>Secondary Leaving Exam Result:</strong> 541/700</li>
-            </ul>
-        </div>
+      <h2>Education</h2>
+      <div class="education-entry">
+        <h3>
+          <strong>Marwadi University, Computer Engineering</strong>
+          <span class="date">Sept 2021 – May 2025</span>
+        </h3>
+        <ul>
+          <li><strong>CGPA:</strong> 7.23/10 (Transcript)</li>
+          <li>
+            <strong>Coursework:</strong> Computer Architecture, Artificial
+            Intelligence, Comparison of Learning Algorithms, Computational
+            Theory
+          </li>
+        </ul>
+      </div>
+      <div class="education-entry">
+        <h3>
+          <strong>BIAM Model School and College, Bogura, Bangladesh</strong>
+          <span class="date">Sept 2019 – Mar 2020</span>
+        </h3>
+        <ul>
+          <li><strong>Secondary Leaving Exam Result:</strong> 541/700</li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Skill -->
     <section id="skills" class="content-section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Web Technologies</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Platforms</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>VS Code</li>
-                    <li>Docker</li>
-                    <li>AWS</li>
-                </ul>
-            </div>
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>C++</li>
+          </ul>
         </div>
+        <div class="skill-category">
+          <h3>Web Technologies</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Platforms</h3>
+          <ul>
+            <li>Git</li>
+            <li>VS Code</li>
+            <li>Docker</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience" class="content-section">
-        <h2>Experience</h2>
-        <div class="experience-entry">
-            <h3>Software Development Intern</h3>
-            <p class="company">Tech Solutions Inc.</p>
-            <p class="duration">June 2023 - August 2023</p>
-            <ul>
-                <li>Developed and maintained web applications using React.js</li>
-                <li>Collaborated with senior developers on large-scale projects</li>
-                <li>Implemented responsive design principles</li>
-            </ul>
-        </div>
+      <h2>Experience</h2>
+      <div class="experience-entry">
+        <h3>Software Development Intern</h3>
+        <p class="company">Tech Solutions Inc.</p>
+        <p class="duration">June 2023 - August 2023</p>
+        <ul>
+          <li>Developed and maintained web applications using React.js</li>
+          <li>Collaborated with senior developers on large-scale projects</li>
+          <li>Implemented responsive design principles</li>
+        </ul>
+      </div>
+
+      <div class="experience-entry">
+        <h3>Research Assistant</h3>
+        <p class="company">Marwadi University</p>
+        <p class="duration">Sept 2022 - May 2023</p>
+        <ul>
+          <li>Conducted research on machine learning algorithms</li>
+          <li>
+            Assisted in the development of a deep learning model for image
+            recognition
+          </li>
+          <li>Published research papers in international journals</li>
+        </ul>
+      </div>
     </section>
 
+    <!-- Project  -->
     <section id="projects" class="content-section">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>AI Image Recognition</h3>
-                <p>A deep learning model for image classification using TensorFlow</p>
-                <div class="project-tags">
-                    <span>Python</span>
-                    <span>TensorFlow</span>
-                    <span>AI</span>
-                </div>
-            </div>
-            <!-- Add more project cards as needed -->
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" , id="intro">
+          <h3>AI Image Recognition</h3>
+          <img src="MyPhoto.jpg" alt="Portfolio Website" />
+          <p>A deep learning model for image classification using TensorFlow</p>
+          <a
+            href="https://masrukhabib.github.io/portfolio-website/"
+            target="_blank"
+            >View Project</a
+          >
+          <div class="project-tags">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>AI</span>
+          </div>
         </div>
+
+        <div class="project-card" , id="intro">
+          <h3>Portfolio Website</h3>
+          <img src="MyPhoto.jpg" alt="Portfolio Website" />
+          <p>A responsive website to showcase my skills and projects</p>
+          <a
+            href="https://masrukhabib.github.io/portfolio-website/"
+            target="_blank"
+            >View Project</a
+          >
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card" id="intro">
+          <h3>Weather App</h3>
+          <img src="MyPhoto.jpg" alt="Portfolio Website" />
+          <p>
+            A web application to display weather information using
+            OpenWeatherMap API
+          </p>
+          <a
+            href="https://masrukhabib.github.io/portfolio-website/"
+            target="_blank"
+            >View Project</a
+          >
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>API</span>
+            <span>HTML</span>
+          </div>
+        </div>
+        <div class="project-card" , id="intro">
+          <h3>Chat Application</h3>
+          <img src="MyPhoto.jpg" alt="Portfolio Website" />
+          <p>A real-time chat application using WebSocket and Node.js</p>
+          <a
+            href="https://masrukhabib.github.io/portfolio-website/"
+            target="_blank"
+            >View Project</a
+          >
+          <div class="project-tags">
+            <span>Node.js</span>
+            <span>WebSocket</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Publications -->
     <section id="publications" class="content-section">
-        <h2>Publications</h2>
-        <div class="publication-list">
-            <div class="publication-entry">
-                <h3>Machine Learning in Healthcare</h3>
-                <p>Published in International Journal of Computer Science</p>
-                <p class="publication-date">2023</p>
-            </div>
+      <h2>Publications</h2>
+
+      <div class="publication-list">
+        <div class="publication-entry">
+          <h3>Machine Learning in Healthcare</h3>
+          <p>Published in International Journal of Computer Science</p>
+          <p class="publication-date">2023</p>
+          <a href="#" class="publication-link">Read Publication</a>
         </div>
+      </div>
+
+      <div class="publication-entry">
+        <h3>Deep Learning for Image Recognition</h3>
+        <p>Published in Journal of Artificial Intelligence Research</p>
+        <p class="publication-date">2022</p>
+        <a href="#" class="publication-link">Read Publication</a>
+      </div>
+
+      <div class="publication-entry">
+        <h3>Natural Language Processing Techniques</h3>
+        <p>Published in International Journal of Computational Linguistics</p>
+        <p class="publication-date">2021</p>
+        <a href="#" class="publication-link">Read Publication</a>
+      </div>
+
+      <div class="publication-entry">
+        <h3>Blockchain Technology in Finance</h3>
+        <p>Published in Financial Technology Review</p>
+        <p class="publication-date">2020</p>
+        <a href="#" class="publication-link">Read Publication</a>
+      </div>
     </section>
 
-    <section id="contact" class="content-section">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Email: masruk.habib@example.com</p>
-                <p>Phone: +1 234 567 8900</p>
-                <p>Location: Rajkot, Gujarat, India</p>
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">Twitter</a>
-            </div>
-        </div>
-    </section>
+    <!-- Contact Section -->
+<section id="contact" class="content-section">
+     <h2>Contact</h2>
+     <div class="contact-container">
+       <div class="contact-info">
+         <h3><u>Get in Touch</u></h3>
+         <p><b>Email:</b> masrukjim@gmail.com</p>
+         <p><b>Phone/WhatsApp:</b> +880 1771 931007</p>
+         <p><b>Location:</b> Rajkot, Gujarat, India</p>
+       </div>
+   
+       <div class="social-links">
+         <a href="https://www.linkedin.com/in/masruk-habib/" class="social-link" target="_blank">
+           <i class="fab fa-linkedin"></i> LinkedIn
+         </a>
+         <a href="https://github.com/MasrukHabib" class="social-link" target="_blank">
+           <i class="fab fa-github"></i> GitHub
+         </a>
+         <a href="https://orcid.org/0009-0006-2231-8839" class="social-link" target="_blank">
+           <i class="fas fa-id-badge"></i> ORCiD
+         </a>
+       </div>
+     </div>
+   </section>
+   
+</style>
 
     <footer>
-        <p>© 2024 Masruk Habib. All rights reserved.</p>
+      <p>© 2024 Masruk Habib. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
