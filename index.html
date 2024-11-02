@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masruk Habib's Portfolio</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Masruk Habib</h1>
-        <p>Student</p>
+        <p>Computer Engineering Student</p>
         <nav>
             <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('education')">Education</button>
             <button onclick="showSection('skills')">Skills</button>
             <button onclick="showSection('experience')">Experience</button>
             <button onclick="showSection('projects')">Projects</button>
@@ -25,40 +25,127 @@
         <img src="MyPhoto.jpg" alt="Masruk Habib">
         <div>
             <h2>I'm Masruk Habib, a Content Writer and Editor.</h2>
-            <p>Masruk Habib is a Computer Engineering student attending Marwadi University, Rajkot, Gujarat, India.</p>
+            <p>Computer Engineering student at Marwadi University, Rajkot, Gujarat, India. Passionate about programming and research, always eager to learn and create innovative solutions.</p>
         </div>
     </section>
 
-    <!-- Content Sections -->
     <section id="about" class="content-section">
-        <h2>About</h2>
-        <p>
-          As a Programming and research enthusiast and computer engineering student, I am passionate about building innovative solutions. I am highly motivated to continuously improve my skills and knowledge, and I am always curious about learning new technologies. Committed to staying up-to-date with the latest industry trends, I am eager to apply my technical expertise and creativity to real-world challenges. </p>
+        <h2>About Me</h2>
+        <p>As a Programming and research enthusiast and computer engineering student, I am passionate about building innovative solutions. I am highly motivated to continuously improve my skills and knowledge, and I am always curious about learning new technologies. Committed to staying up-to-date with the latest industry trends, I am eager to apply my technical expertise and creativity to real-world challenges.</p>
+    </section>
+
+    <section id="education" class="content-section">
+        <h2>Education</h2>
+        <div class="education-entry">
+            <h3>
+                <strong>Marwadi University, Computer Engineering</strong>
+                <span class="date">Sept 2021 – May 2025</span>
+            </h3>
+            <ul>
+                <li><strong>GPA:</strong> 8.58/10 (Transcript)</li>
+                <li><strong>Coursework:</strong> Computer Architecture, Artificial Intelligence, Comparison of Learning Algorithms, Computational Theory</li>
+            </ul>
+        </div>
+        <div class="education-entry">
+            <h3>
+                <strong>Shakiso Secondary and Preparatory School</strong>
+                <span class="date">Sept 2016 – Mar 2021</span>
+            </h3>
+            <ul>
+                <li><strong>Secondary Leaving Exam Result:</strong> 541/700</li>
+            </ul>
+        </div>
     </section>
 
     <section id="skills" class="content-section">
         <h2>Skills</h2>
-        <p>List of skills and competencies.</p>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Web Technologies</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                    <li>Docker</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="experience" class="content-section">
         <h2>Experience</h2>
-        <p>Details of professional experience and internships.</p>
+        <div class="experience-entry">
+            <h3>Software Development Intern</h3>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="duration">June 2023 - August 2023</p>
+            <ul>
+                <li>Developed and maintained web applications using React.js</li>
+                <li>Collaborated with senior developers on large-scale projects</li>
+                <li>Implemented responsive design principles</li>
+            </ul>
+        </div>
     </section>
 
     <section id="projects" class="content-section">
         <h2>Projects</h2>
-        <p>Description of major projects and contributions.</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>AI Image Recognition</h3>
+                <p>A deep learning model for image classification using TensorFlow</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>AI</span>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
     </section>
 
     <section id="publications" class="content-section">
         <h2>Publications</h2>
-        <p>List of publications, articles, or papers written by Masruk.</p>
+        <div class="publication-list">
+            <div class="publication-entry">
+                <h3>Machine Learning in Healthcare</h3>
+                <p>Published in International Journal of Computer Science</p>
+                <p class="publication-date">2023</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="content-section">
         <h2>Contact</h2>
-        <p>Contact details or a contact form.</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Email: masruk.habib@example.com</p>
+                <p>Phone: +1 234 567 8900</p>
+                <p>Location: Rajkot, Gujarat, India</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
     </section>
 
     <footer>
