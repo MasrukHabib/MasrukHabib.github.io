@@ -53,6 +53,24 @@ nav button {
   letter-spacing: 0.5px;
 }
 
+.nav-button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background: #34495e;
+}
+
+.nav-button.active {
+  background: #2c3e50 !important;
+  color: white !important;
+}
+
 nav button:hover {
   background: #2c3e50;
   color: white;
