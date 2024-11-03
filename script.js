@@ -1,39 +1,31 @@
-// DOM Content Loaded Event Listener
 document.addEventListener("DOMContentLoaded", () => {
-  // Show about section by default
-  showSection("about");
-
-  // Add active state to navigation buttons
-  updateNavigationState("about");
-});
-
-// Function to show selected section and hide others
-function showSection(sectionId) {
-  // Hide all content sections with a fade out effect
+  // Show all sections by default
   const sections = document.querySelectorAll(".content-section");
   sections.forEach((section) => {
-    section.style.opacity = "0";
-    setTimeout(() => {
-      section.style.display = "none";
-    }, 300);
+    section.style.display = "block";
+    section.style.opacity = "1";
   });
 
-  // Show the selected section with a fade in effect
+  // Add active state to the first navigation button
+  updateNavigationState("about");
+
+  // Add event listeners to navigation buttons
+  const buttons = document.querySelectorAll("nav button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const sectionId = button.getAttribute("data-section-id");
+      showSection(sectionId);
+    });
+  });
+});
+
+// Function to show selected section
+function showSection(sectionId) {
   const selectedSection = document.getElementById(sectionId);
   if (selectedSection) {
-    setTimeout(() => {
-      selectedSection.style.display = "block";
-      setTimeout(() => {
-        selectedSection.style.opacity = "1";
-      }, 50);
-    }, 300);
+    selectedSection.scrollIntoView({ behavior: "smooth" });
+    updateNavigationState(sectionId);
   }
-
-  // Update navigation state
-  updateNavigationState(sectionId);
-
-  // Scroll to section smoothly
-  scrollToSection(sectionId);
 }
 
 // Function to update navigation button states
@@ -44,28 +36,17 @@ function updateNavigationState(sectionId) {
     button.classList.remove("active");
 
     // Add active class to current section button
-    if (button.getAttribute("onclick").includes(sectionId)) {
+    if (button.getAttribute("data-section-id") === sectionId) {
       button.classList.add("active");
     }
   });
-}
-
-// Function to scroll to section
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop - 20,
-      behavior: "smooth",
-    });
-  }
 }
 
 // Add CSS styles for animations
 const style = document.createElement("style");
 style.textContent = `
      .content-section {
-         opacity: 0;
+         opacity: 1;
          transition: opacity 0.3s ease-in-out;
      }
      
@@ -125,17 +106,3 @@ document
     el.style.opacity = "0";
     observer.observe(el);
   });
-
-// Delay for fade-out
-section.style.opacity = "0";
-setTimeout(() => {
-  section.style.display = "none";
-}, 300); // Adjust this delay to control fade-out speed
-
-// Delay for fade-in
-setTimeout(() => {
-  selectedSection.style.display = "block";
-  setTimeout(() => {
-    selectedSection.style.opacity = "1";
-  }, 50); // Adjust this delay to control when the opacity starts
-}, 300); // Adjust this delay to control fade-in speed
