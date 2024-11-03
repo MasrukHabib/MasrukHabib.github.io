@@ -18,9 +18,10 @@
       <button onclick="showSection('about')">About</button>
       <button onclick="showSection('education')">Education & Certification</button>
       <button onclick="showSection('skills')">Skills</button>
-      <button onclick="showSection('experience')">Experience</button>
+      <button onclick="showSection('experience')">Experience & Volunteering</button>
       <button onclick="showSection('projects')">Projects</button>
       <button onclick="showSection('publications')">Publications</button>
+      <!-- <button onclick="showSection('blogs')">Blogs</button> -->
       <button onclick="showSection('contact')">Contact</button>
     </nav>
   </header>
@@ -123,59 +124,72 @@
   </section>
 
   <!-- Skill -->
-  <section id="skills" class="content-section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Programming Languages</h3>
-        <ul>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>Java</li>
-          <li>C++</li>
-          <li>C</li>
-          <li>MySQL</li>
-        </ul>
+<section id="skills" class="content-section">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill-category">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fab fa-js-square"></i> JavaScript</li>
+        <li><i class="fab fa-java"></i> Java</li>
+        <li><i class="fas fa-copyright"></i> C++</li>
+        <li><i class="fas fa-copyright"></i> C</li>
+        <li><i class="fas fa-database"></i> MySQL</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li><i class="fab fa-html5"></i> HTML5</li>
+        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li><i class="fab fa-react"></i> React.js</li>
+        <li><i class="fab fa-node-js"></i> Node.js</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>AI & Machine Learning</h3>
+      <ul>
+        <li><i class="fas fa-brain"></i> Scikit-learn</li>
+        <li><i class="fas fa-robot"></i> TensorFlow</li>
+        <li><i class="fas fa-brain"></i> PyTorch</li>
+        <li><i class="fas fa-camera"></i> OpenCV</li>
+        <li><i class="fas fa-brain"></i> Deep Learning</li>
+        <li><i class="fas fa-cogs"></i> Machine Learning</li>
+        <li><i class="fas fa-eye"></i> Computer Vision</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li><i class="fab fa-git-alt"></i> Git</li>
+        <li><i class="fab fa-github"></i> GitHub</li>
+        <li><i class="fas fa-chart-line"></i> Tableau</li>
+        <li><i class="fas fa-code"></i> VS Code</li>
+        <li><i class="fas fa-pencil-ruler"></i> Figma</li>
+        <li><i class="fab fa-linux"></i> Linux</li>
+        <li><i class="fab fa-aws"></i> AWS</li>
+      </ul>
+    </div>
 
-      </div>
-      <div class="skill-category">
-        <h3>Web Technologies</h3>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>React.js</li>
-          <li>Node.js</li>
-        </ul>
-      </div>
+    <div class="skill-category">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><i class="fas fa-chess-king"></i> Leadership</li>
+        <li><i class="fas fa-book"></i> Research</li>
+        <li><i class="fas fa-comments"></i> Communication</li>
+        <li><i class="fas fa-users"></i> Teamwork</li>
+        <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
+        <li><i class="fas fa-hourglass-half"></i> Time Management</li>
+        <li><i class="fas fa-tasks"></i> Project Management</li>
+        <li><i class="fas fa-brain"></i> Critical Thinking</li>
+        <li><i class="fas fa-user-check"></i> Adaptability</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
 
-      <div class="skill-category">
-        <h3>AI & Machine Learning</h3>
-        <ul>
-          <li>Scikit-learn</li>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>OpenCV</li>
-          <li>Deep Learning</li>
-          <li>Machine Learning</li>
-          <li>Computer Vision</li>
-
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Tools & Platforms</h3>
-        <ul>
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>Tableau</li>
-          <li>VS Code</li>
-          <li>Frigma</li>
-          <li>Linux</li>
-          <li>AWS</li>
-        </ul>
-      </div>
-
-  </section>
 
   <!-- Experience -->
   <section id="experience" class="content-section">
@@ -216,7 +230,7 @@
       <p class="duration">Nov 2016 - May 2020</p>
       <ul>
         <li>Participated in various social welfare activities.</li>
-        <li>Organized blood donation camps and health awareness programs.</li>
+        <li>Organized health awareness programs.</li>
         <li>Provided support to disaster-affected communities.</li>
         <li>Served as a student leader at BIAM Model School and College, actively involved in both school initiatives
           and the Red Crescent Unit in Bogura.</li>
@@ -316,6 +330,30 @@
     </div>
 
   </section>
+
+  <!-- Blogs -->
+  <!-- <section id="blog" class="blog-entry">
+    <h2>Blogs</h2>
+    <div class="blog-list">
+      <div class="blog-entry">
+        <h3>demo demo demo demo demo </h3>
+        <p>Learn how to create a real-time chat application using WebSocket and Node.js</p>
+        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
+      </div>
+
+      <div class="blog-entry">
+        <h3>Getting Started with Machine Learning: A Beginner's Guide</h3>
+        <p>Explore the basics of machine learning and how to get started with your first project</p>
+        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
+      </div>
+
+      <div class="blog-entry">
+        <h3>Introduction to Deep Learning: Concepts and Applications</h3>
+        <p>Discover the fundamentals of deep learning and its applications in various fields</p>
+        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
+      </div>
+    </div>
+  </section> -->
 
   <!-- Contact Section -->
   <section id="contact" class="content-section">
