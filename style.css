@@ -114,7 +114,7 @@ nav button:hover {
   padding: 1.5rem;
   background: #dee0e2;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(132, 16, 16, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -132,7 +132,7 @@ nav button:hover {
 }
 
 .education-entry .date {
-  color: #cfd4d7;
+  color: #555555;
   font-size: 0.9em;
 }
 
@@ -153,7 +153,7 @@ nav button:hover {
 }
 
 .skill-category {
-  background: #d7dade;
+  background: #e1e3e6;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -186,7 +186,7 @@ nav button:hover {
 .experience-entry {
   margin: 1.5rem 0;
   padding: 1.5rem;
-  background: #eaedef;
+  background: #eceeef;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
