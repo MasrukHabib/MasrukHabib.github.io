@@ -100,7 +100,6 @@ nav button:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .content-section h2 {
   color: #2c3e50;
   margin-bottom: 1.5rem;
@@ -282,6 +281,7 @@ nav button:hover {
    .social-link:hover {
      background: #1a252f;
    }
+   
 
 /* Footer */
 footer {
