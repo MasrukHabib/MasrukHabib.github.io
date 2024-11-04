@@ -227,7 +227,7 @@ nav button:hover {
 }
 
 /* Projects Section */
-.project-grid {
+/* .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -259,6 +259,87 @@ nav button:hover {
   border-radius: 15px;
   font-size: 0.9em;
   color: #2c3e50;
+} */
+
+/* Project Section */
+#projects {
+  /* padding: 2rem;
+  margin: 20px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+#projects .project-card {
+  background: #dfdfdf;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center the content */
+}
+
+#projects .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#projects .project-card img {
+  width: 50%; /* Set the image width to 50% of the card's width */
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block;
+}
+
+#projects .project-card h3 {
+  font-size: 1.5em;
+  margin: 16px;
+}
+
+#projects .project-card p {
+  font-size: 1em;
+  margin: 16px;
+}
+
+#projects .project-card a {
+  display: inline-block;
+  margin: 16px;
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#projects .project-card a:hover {
+  background: #34495e;
+}
+
+#projects .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the tags */
+  margin: 16px;
+}
+
+#projects .project-tags span {
+  background: #eee;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.9em;
 }
 
 
