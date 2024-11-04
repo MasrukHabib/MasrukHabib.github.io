@@ -296,14 +296,15 @@ nav button:hover {
 }
 
 #projects .project-card img {
-  width: 50%; /* Set the image width to 50% of the card's width */
+  width: 60%; /* Set the image width to 50% of the card's width */
   height: auto;
   margin: 0 auto; /* Center the image horizontally */
   display: block;
+
 }
 
 #projects .project-card h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 16px;
 }
 
