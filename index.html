@@ -4,605 +4,506 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website</title>
+  <title>Masruk Habib - Computer Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta name="description"
+    content="Portfolio of Masruk Habib - Computer Engineering Student, Researcher, and Software Developer" />
+  <meta name="keywords" content="Masruk Habib, Computer Engineering, Software Developer, Machine Learning, Research" />
+  <link rel="icon" type="image/jpeg" href="MyPhoto.jpg" />
 </head>
 
 <body>
-  <header>
-    <h1>Masruk Habib</h1>
-    <p>Computer Engineering Student</p>
-    <nav>
-      <button onclick="showSection('about')">About</button>
-      <button onclick="showSection('education')">Education & Certification</button>
-      <button onclick="showSection('skills')">Skills</button>
-      <button onclick="showSection('experience')">Experience & Volunteering</button>
-      <button onclick="showSection('projects')">Projects</button>
-      <button onclick="showSection('publications')">Publications</button>
-      <!-- <button onclick="showSection('blogs')">Blogs</button> -->
-      <button onclick="showSection('contact')">Contact</button>
-    </nav>
-  </header>
-
-  <section id="intro">
-    <img src="MyPhoto.jpg" alt="Masruk Habib" />
-    <div>
-      <h2>Hi, I’m Masruk Habib – Driven by Innovation, Guided by Technology.</h2>
-      <!-- <button class="nav-button" onclick="window.open('Myresume.pdf', '_blank')">Download Resume</button> -->
-      <button class="nav-button" onclick="window.open('Myresume.pdf', '_blank')">Download Resume</button>
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/masruk-habib/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/MasrukHabib" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://orcid.org/0009-0006-2231-8839" target="_blank">
-          <i class="fab fa-orcid"></i>
-        </a>
-        <a href="mailto:masrukjim@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
+  <div class="page-container">
+    <header>
+      <div class="header-content">
+        <img src="MyPhoto.jpg" alt="Masruk Habib" class="profile-photo" />
+        <div class="header-text">
+          <h1>Masruk Habib</h1>
+          <p>
+            Programming and Researcher Enthusiast  |  Computer Engineering Student
+          </p>
+        </div>
       </div>
-      
-    
-      <!-- <p>
-          Computer Engineering student at Marwadi University, Rajkot, Gujarat,
-          India. Passionate about programming and research, always eager to
-          learn and create innovative solutions.
-        </p> -->
+      <nav>
+        <a href="#home" data-section="home" class="active">About</a>
+        <a href="#education" data-section="education">Education</a>
+        <a href="#certificates" data-section="certificates">Certificates</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <!-- <a href="#experience" data-section="experience">Experience</a> -->
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#publications" data-section="publications">Publications</a>
+        <a href="#about" data-section="about">Award-Winning</a>
+        <a href="#contact" data-section="contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="section active">
+        <div class="section-content">
+          <div class="home-content">
+            <h2>Welcome, </h2>
+            <br <p>
+            I am Masruk Habib, As a passionate programming and research
+            enthusiast pursuing a B.Tech in Computer Engineering, I am
+            dedicated to developing innovative solutions to address
+            real-world challenges. My journey in technology is marked by a
+            commitment to continuous learning, skill enhancement, and a
+            strong interest in emerging technologies. With hands-on
+            experience in various programming languages, including Python,
+            C, C++, Java, Node.js, and Express.js, I have created a range of
+            projects across web and mobile platforms. My enthusiasm for AI,
+            machine learning, and data science has driven me to explore
+            frameworks like TensorFlow and PyTorch, which I utilize to build
+            deep learning models. Beyond technical projects, I am deeply
+            invested in research and have contributed to published works
+            that push the boundaries of technology. My experience in
+            research writing and literature reviews equips me to communicate
+            complex ideas effectively and stay informed about industry
+            trends. As a student mentor in the Research Activities (RAC)
+            Club, managed by my Computer Engineering department, I guide and
+            support fellow students in their research endeavors. I also had
+            the privilege of being part of an award-winning team at the
+            Azadi Ka Amrit Mahotsav Hackathon 2022, a state-level hackathon,
+            which further reinforced my drive to make a meaningful impact
+            through technology.
+            </p>
+            <br>
+            <!-- <p>
+                Driven by Innovation, Guided by Technology. A passionate
+                computer engineering student dedicated to developing innovative
+                solutions and pushing the boundaries of technological research.
+              </p> -->
+
+            <div class="cta-buttons">
+              <a href="Myresume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+              <!-- <a href="#contact" class="btn btn-secondary">Get in Touch</a> -->
+            </div>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/masruk-habib/" target="_blank" class="btn btn-secondary"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/MasrukHabib" target="_blank" class="btn btn-secondary"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://orcid.org/0009-0006-2231-8839" target="_blank" class="btn btn-secondary"><i
+                  class="fab fa-orcid"></i></a>
+              <a href="mailto:masrukjim@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-content">
+          <h2><u>Awards:</u></h2>
+          <br>
+          <h3>Award-winning team at Azadi Ka Amrit Mahotsav Hackathon-2022</h3>
+          <p><strong><i>-Issued by Education Department (Higher & Technical), Government of Gujarat · Mar
+                2023</i></strong></p><br>
+          <p>Our team was honored with the winning award at Gujarat's Azadi Ka Amrit Mahotsav Hackathon 2022, a
+            state-level event marking India's 75th year of independence. The hackathon served as a platform for
+            innovators and problem-solvers from different sectors to propose solutions to pressing challenges. Our
+            project was recognized for its innovative approach and practical impact, which earned us a noteworthy
+            recognition. We are deeply grateful for the opportunity to contribute to this significant event and exhibit
+            our skills at a state level.</p>
+
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-content">
+          <h2><u>Education:</u></h2>
+          <br>
+
+          <div class="education-entry">
+            <h3>Bachelor of Technology - Computer Engineering</h3>
+            <p><strong>Marwadi University, Rajkot, Gujarat, India.</strong></p>
+            <p class="date"><i>July 2021 – Present</i></p>
+            <strong>CGPA:</strong> 7.40/10 [Up to 7th Semester]<br>
+            <strong>Coursework:</strong> Computer Programming, Object-Oriented Design and Programming, Data Structure,
+            Web
+            Technology, Advanced Java Technology, Database Management System, Operating System, Computer Organization
+            and
+            Architecture, Computer Network, Cloud Computing Essentials, Cyber Security, Design and Analysis of
+            Algorithms,
+            Software Engineering, Theory of Computation, Computer Vision, Data Visualization, .NET Technologies,
+            Compiler Design,UI AND UX Design, Big Data Analytics, Machine Learning, Artificial Intelligence, Mini
+            Project, Major Projects.
+          </div>
+          <br>
+
+          <div class="education-entry">
+            <h3>Higher Secondary Certificate Examination-2020 [A-Levels]. </h3>
+            <p><strong>BIAM Model School and College, Bogura, Bangladesh.</strong> </p>
+            <span class="date"><i>session 2018 – 2019</i></span><br>
+            <strong>GPA:</strong> 5.00/5.00
+          </div>
+          <br>
+          <div class="education-entry">
+            <h3>
+              <h3>Secondary School Certificate Examination-2018 [O-Levels].</h3>
+              <p><strong>BIAM Model School and College, Bogura, Bangladesh.</strong> </p>
+              <span class="date"><i>session 2016 – 2017</i></span><br>
+              <strong>GPA:</strong> 5.00/5.00
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" class="section">
+        <div class="section-content">
+          <h2><strong><U>Certificates:</U></strong></h2>
+          <br>
+
+          <div class="certificates-grid">
+
+            <div class="certificate-item">
+              <h3>Explore Machine Learning using Python</h3>
+              <i>Issued by Infosys|Springboard</i>
+              <br><strong>Issued Date:</strong> September 2024
+              <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Student Research Internship Training (SRIT)</h3>
+              <i>Issued by Department of Computer Engineering and Research Activities Club (RAC)</i>
+              <br><strong>Issued Date:</strong> July 2024
+              <br><strong>Certificate NO:</strong> RAC/SRIT/S24
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>The Complete Tabkeau Bootcamp for Aspiring Data Scientists</h3>
+              <i>Issued by Infosys|Springboard</i>
+              <br><strong>Issued Date:</strong> March 2023
+              <!-- <br><strong>Certificate NO:</strong> -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Postman API Fundamentals Student Expert</h3>
+              <i>Issued by Postman</i>
+              <br><strong>Issued Date:</strong> April 2023
+              <br><strong>Credential ID:</strong> 643109c0755a710194397824
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>CCNAv7: Introduction to Network</h3>
+              <i>Issued by Cisco Network Academy</i>
+              <br><strong>Issued Date:</strong> February 2023
+              <!-- <br><strong>Credential ID:</strong> 643109c0755a710194397824 -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>NDG Linux Essentials</h3>
+              <i>Issued by Cisco Network Academy</i>
+              <br><strong>Issued Date:</strong> April 2023
+              <!-- <br><strong>Credential ID:</strong> 643109c0755a710194397824 -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>AWS Academy Graduate - AWS Academy Cloud Foundations</h3>
+              <i>Issued by Amazon Web Services Training and Certification</i>
+              <br><strong>Issued Date:</strong> October 2023
+              <!-- <br><strong>Credential ID:</strong> 643109c0755a710194397824 -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Database Programming with SQL</h3>
+              <i>Issued by Oracle Academy</i>
+              <br><strong>Issued Date:</strong> November 2022
+              <!-- <br><strong>Credential ID:</strong> 643109c0755a710194397824 -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Python Data Structures</h3>
+              <i>Issued by Coursera</i>
+              <br><strong>Issued Date:</strong> August 2022
+              <br><strong>Credential ID:</strong> 4D9YCAE6YNJU
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Programming for Everybody (Getting Started with Python)</h3>
+              <i>Issued by Coursera</i>
+              <br><strong>Issued Date:</strong> July 2022
+              <br><strong>Credential ID:</strong> 4XBH5XFBLRHV
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Digital Security Essentials</h3>
+              <i>Issued by MuktoPaath</i>
+              <br><strong>Issued Date:</strong> May 2020
+              <br><strong>Credential ID:</strong> MC-R560341M893443V106I
+            </div>
+            <br>
+
+
+            <div class="certificate-item">
+              <h3>Basic First Aid Training</h3>
+              <i>Issued by BDRCS</i>
+              <br><strong>Issued Date:</strong> March 2018
+              <!-- <br><strong>Credential ID:</strong> MC-R560341M893443V106I -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Search and Rescue Training</h3>
+              <i>Issued by BDRCS</i>
+              <br><strong>Issued Date:</strong> October 2018
+              <!-- <br><strong>Credential ID:</strong> MC-R560341M893443V106I -->
+            </div>
+            <br>
+
+            <div class="certificate-item">
+              <h3>Code of Conduct (English)</h3>
+              <i>Issued by IFRC|Learning platform</i>
+              <br><strong>Issued Date:</strong> March 2018
+            </div>
+            <br>
+            <!-- Add more certificates as needed -->
+          </div>
+        </div>
+      </section>
+
+
+      <section id="skills" class="section">
+        <div class="section-content">
+          <h2><u>Skills:</u></h2>
+          <br>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h3>Programming Languages:</h3>
+              <li><i class="fab fa-python"></i> Python</li>
+              <li><i class="fab fa-js-square"></i> JavaScript</li>
+              <li><i class="fab fa-java"></i> Java</li>
+              <li><i class="fas fa-copyright"></i> C++</li>
+              <li><i class="fas fa-copyright"></i> C</li>
+              <li><i class="fas fa-database"></i> MySQL</li>
+            </div>
+          
+          <br>
+
+          <div class="skill-category">
+            <h3>Web Technologies:</h3>
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li><i class="fab fa-react"></i> React.js</li>
+            <li><i class="fab fa-node-js"></i> Node.js</li>
+          </div>
+          <br>
+
+          <div class="skill-category">
+            <h3>Tools & Platforms:</h3>
+            <li><i class="fab fa-git-alt"></i> Git</li>
+            <li><i class="fab fa-github"></i> GitHub</li>
+            <li><i class="fas fa-chart-line"></i> Tableau</li>
+            <li><i class="fas fa-code"></i> VS Code</li>
+            <li><i class="fas fa-pencil-ruler"></i> Figma</li>
+            <li><i class="fab fa-linux"></i> Linux</li>
+            <li><i class="fab fa-aws"></i> AWS</li>
+          </div>
+          <br>
+
+          <div class="skill-category">
+            <h3>Machine Learning:</h3>
+            <li><i class="fas fa-brain"></i> Scikit-learn</li>
+            <li><i class="fas fa-robot"></i> TensorFlow</li>
+            <li><i class="fas fa-brain"></i> PyTorch</li>
+            <li><i class="fas fa-camera"></i> OpenCV</li>
+            <li><i class="fas fa-brain"></i> Deep Learning</li>
+            <li><i class="fas fa-cogs"></i> Machine Learning</li>
+            <li><i class="fas fa-eye"></i> Computer Vision</li>
+          </div>
+          <br>
+
+          <div class="skill-category">
+            <h3>Soft Skills:</h3>
+            <li><i class="fas fa-chess-king"></i> Leadership</li>
+            <li><i class="fas fa-book"></i> Research</li>
+            <li><i class="fas fa-comments"></i> Communication</li>
+            <li><i class="fas fa-users"></i> Teamwork</li>
+            <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
+            <li><i class="fas fa-hourglass-half"></i> Time Management</li>
+            <li><i class="fas fa-tasks"></i> Project Management</li>
+            <li><i class="fas fa-brain"></i> Critical Thinking</li>
+            <li><i class="fas fa-user-check"></i> Adaptability</li>
+          </div>
+          <br>
+
+        </div>
+      </div>
+    </section>
+<!-- need to eddit  -->
+  <section id="experience" class="section">
+    <div class="section-content">
+      <h2>Professional Experience:</h2>
+      <div class="experience-entry">
+        <h3>Junior Backend Developer</h3>
+        <p>Maharshi Care · Healthcare Startup</p>
+        <p class="date">July 2023 - December 2023</p>
+        <ul>
+          <li>
+            Worked with MVC framework to integrate databases and create
+            API endpoints
+          </li>
+          <li>
+            Utilized TypeScript for static typing and improved code
+            quality
+          </li>
+          <li>
+            Developed scalable backend solutions using Node.js and
+            PostgreSQL
+          </li>
+        </ul>
+      </div>
+
+      <h2>Volunteering</h2>
+      <div class="experience-entry">
+        <h3>Red Crescent Youth Volunteer</h3>
+        <p>Bangladesh Red Crescent Society (BDRCS)</p>
+        <p class="date">Nov 2016 - May 2021</p>
+        <ul>
+          <li>
+            Participated in social welfare and health awareness programs
+          </li>
+          <li>Supported disaster-affected communities</li>
+          <li>Developed leadership and communication skills</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- about start -->
-  <section id="about" class="content-section">
-    <h2>About Me</h2>
-    <p>
-      As a passionate programming and research enthusiast pursuing a B.Tech in Computer Engineering, I am dedicated to
-      developing innovative solutions to address real-world challenges. My journey in technology is marked by a
-      commitment to continuous learning, skill enhancement, and a strong interest in emerging technologies.
+  <section id="projects" class="section">
+    <div class="section-content">
+      <h2><u>Projects:</u></h2>
+      <div class="project-filter">
+        <select>
+          <option value="all">All Projects</option>
+          <option value="ml">Machine Learning</option>
+          <option value="web">Web Development</option>
+        </select>
+      </div>
+      <br>
 
-      With hands-on experience in various programming languages, including Python, C, C++, Java, Node.js, and
-      Express.js, I have created a range of projects across web and mobile platforms. My enthusiasm for AI, machine
-      learning, and data science has driven me to explore frameworks like TensorFlow and PyTorch, which I utilize to
-      build deep learning models.
+      <div class="project-grid">
+        <div class="project-card ml">
+          <!-- <img src="project image/asd.jpg" alt="ASD Prediction Application" /> -->
+          <h3>ASD Prediction Django App</h3>
+          <p>
+            Automated web application for Autism Spectrum Disorder
+            prediction using machine learning
+          </p>
+          <a href="https://github.com/MasrukHabib/ASD_Predictor_ML_Django_App" target="_blank" class="btn btn-secondary">View Project</a>
+        </div>
 
-      Beyond technical projects, I am deeply invested in research and have contributed to published works that push the
-      boundaries of technology. My experience in research writing and literature reviews equips me to communicate
-      complex ideas effectively and stay informed about industry trends. Additionally, my student research internship
-      has sharpened my analytical skills and my ability to develop innovative solutions.
+        <div class="project-card ml">
+          <!-- <img src="project image/hypo.jpg" alt="Hypothyroid Predictor" /> -->
+          <h3>Hypothyroid Predictor</h3>
+          <p>
+            Machine learning Flask application for hypothyroid disease
+            prediction
+          </p>
+          <a href="https://github.com/MasrukHabib/Hypothyroid_Predictor_ML_Flask_App" target="_blank" class="btn btn-secondary">View Project</a>
+        </div>
 
-      As a student mentor in the <i>Research Activities (RAC) Club</i>, managed by my Computer Engineering department, I
-      guide and support fellow students in their research endeavors. I also had the privilege of being part of an
-      award-winning team at the <i>Azadi Ka Amrit Mahotsav Hackathon 2022</i>, a state-level hackathon, which further
-      reinforced my drive to make a meaningful impact through technology.
+        <div class="project-card web">
+          <!-- <img src="project image/sahayata-setu.jpg" alt="Sahayata Setu" /> -->
+          <h3>Sahayata Setu</h3>
+          <p>Web and mobile application for community support</p>
+          <a href="https://github.com/Sahayata-Setu" target="_blank" class="btn btn-secondary">View Project</a>
+        </div>
 
-      Eager to collaborate on impactful projects, I bring both technical expertise and a problem-solving mindset, aiming
-      to contribute to significant progress in computer engineering and software development.
-    </p>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="content-section">
-    <h2>Education</h2>
-    <div class="education-entry">
-      <h3>
-        <strong><b>Bachelor Of Technology - Computer Engineering.
-            <br>Marwadi University, Rajkot, Gujrat, India</b></strong>
-        <span class="date"> July 2021 – Present</span>
-      </h3>
-      <ul>
-        <li><strong>CGPA:</strong> 7.40/10 [Up to 7th Semester]</li>
-
-        <li>
-          <strong>Coursework:</strong> Computer Programming, Object-Oriented Design and Programming, Data Structure, Web
-          Technology, Advanced Java Technology, Database Management System, Operating System, Computer Organization and
-          Architecture, Computer Network, Cloud Computing Essentials, Cyber Security, Design and Analysis of Algorithms,
-          Software Engineering, Theory of Computation, Computer Vision, Data Visualization, .NET Technologies, Compiler Design,UI AND UX Design, Big Data Analytics, Machine Learning, Artificial Intelligence, Mini Project, Major Projects.
-        </li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Higher Secondary Certificate Examination-2020 [A-Levels].
-            <br>BIAM Model School and College, Bogura, Bangladesh</b></strong>
-        <span class="date">session 2018 – 2019</span>
-      </h3>
-      <ul>
-        <li><strong>GPA:</strong> 5.00/5.00</li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Secondary School Certificate Examination-2018 [O-Levels].
-            <br>BIAM Model School and College, Bogura, Bangladesh</b></strong>
-        <span class="date">session 2016 – 2017</span>
-      </h3>
-      <ul>
-        <li><strong>GPA:</strong> 5.00/5.00</li>
-      </ul>
-    </div>
-
-    <!-- Certificate part  -->
-    <h2>Certificates</h2>
-    <div class="education-entry">
-      <h3>
-        <strong><b>Explore Machine Learning using Python</b></strong>
-        <span class="date">Issued by Infosys|Springboard</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> September 2024</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Student Research Internship Training(SRIT)</b></strong>
-        <span class="date">Issued by Department of Computer Engineering and Research Activities Club(RAC)</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> July 2024</li>
-        <li><strong>Certificate NO:</strong> RAC/SRIT/S24 </li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>The Complete Tabkeau Bootcamp for Aspiring Data Scientists</b></strong>
-        <span class="date">Issued by Infosys|Springboard</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> March 2023</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Postman API Fundamentals Student Expert</b></strong>
-        <span class="date">Issued by Postman</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> April 2023</li>
-        <li><strong>Credential ID:</strong> 643109c0755a710194397824 </li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>CCNAv7: Introduction to Network</b></strong>
-        <span class="date">Issued by Cisco Network Academy</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> February 2023</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>NDG Linux Essentials</b></strong>
-        <span class="date">Issued by Cisco Network Academy</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> April 2023</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>AWS Academy Graduate - AWS Academy Cloud Foundations</b></strong>
-        <span class="date">Issued by Amazon Web Services Training and Certification</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> October 2023</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Database Programming with SQL</b></strong>
-        <span class="date">Issued by Oracle Academy</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> November 2022</li>
-        <!-- <li><strong>Certificate ID:</strong> UC-1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Python Data Structures</b></strong>
-        <span class="date">Issued by Coursera</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> August 2022</li>
-        <li><strong>Credential ID:</strong> 4D9YCAE6YNJU </li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Programming for Everybody (Getting Started with Python)</b></strong>
-        <span class="date">Issued by Coursera</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> July 2022</li>
-        <li><strong>Credential ID:</strong> 4XBH5XFBLRHV</li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Digital Security Essentials</b></strong>
-        <span class="date">Issued by MuktoPaath</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> May 2020</li>
-        <li><strong>Credential ID:</strong> MC-R560341M893443V106I</li>
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Basic First Aid Training</b></strong>
-        <span class="date">Issued by BDRCS</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> March 2018</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Search and Rescue Training</b></strong>
-        <span class="date">Issued by BDRCS</span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> October 2018</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        <strong><b>Code of Conduct (English)</b></strong>
-        <span class="date">Issued by IFRC|Learning platform </span>
-      </h3>
-      <ul>
-        <li><strong>Issued Date:</strong> March 2018</li>
-        <!-- <li><strong>Certificate ID:</strong> 1234567890</li> -->
-      </ul>
-
-  </section>
-
-  <!-- Skill -->
-<section id="skills" class="content-section">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div class="skill-category">
-      <h3>Programming Languages</h3>
-      <ul>
-        <li><i class="fab fa-python"></i> Python</li>
-        <li><i class="fab fa-js-square"></i> JavaScript</li>
-        <li><i class="fab fa-java"></i> Java</li>
-        <li><i class="fas fa-copyright"></i> C++</li>
-        <li><i class="fas fa-copyright"></i> C</li>
-        <li><i class="fas fa-database"></i> MySQL</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>Web Technologies</h3>
-      <ul>
-        <li><i class="fab fa-html5"></i> HTML5</li>
-        <li><i class="fab fa-css3-alt"></i> CSS3</li>
-        <li><i class="fab fa-react"></i> React.js</li>
-        <li><i class="fab fa-node-js"></i> Node.js</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>AI & Machine Learning</h3>
-      <ul>
-        <li><i class="fas fa-brain"></i> Scikit-learn</li>
-        <li><i class="fas fa-robot"></i> TensorFlow</li>
-        <li><i class="fas fa-brain"></i> PyTorch</li>
-        <li><i class="fas fa-camera"></i> OpenCV</li>
-        <li><i class="fas fa-brain"></i> Deep Learning</li>
-        <li><i class="fas fa-cogs"></i> Machine Learning</li>
-        <li><i class="fas fa-eye"></i> Computer Vision</li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <h3>Tools & Platforms</h3>
-      <ul>
-        <li><i class="fab fa-git-alt"></i> Git</li>
-        <li><i class="fab fa-github"></i> GitHub</li>
-        <li><i class="fas fa-chart-line"></i> Tableau</li>
-        <li><i class="fas fa-code"></i> VS Code</li>
-        <li><i class="fas fa-pencil-ruler"></i> Figma</li>
-        <li><i class="fab fa-linux"></i> Linux</li>
-        <li><i class="fab fa-aws"></i> AWS</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <h3>Soft Skills</h3>
-      <ul>
-        <li><i class="fas fa-chess-king"></i> Leadership</li>
-        <li><i class="fas fa-book"></i> Research</li>
-        <li><i class="fas fa-comments"></i> Communication</li>
-        <li><i class="fas fa-users"></i> Teamwork</li>
-        <li><i class="fas fa-lightbulb"></i> Problem-Solving</li>
-        <li><i class="fas fa-hourglass-half"></i> Time Management</li>
-        <li><i class="fas fa-tasks"></i> Project Management</li>
-        <li><i class="fas fa-brain"></i> Critical Thinking</li>
-        <li><i class="fas fa-user-check"></i> Adaptability</li>
-      </ul>
-    </div>
-  </div>
-  </div>
-</section>
-
-
-  <!-- Experience -->
-  <section id="experience" class="content-section">
-    <h2>Experience</h2>
-    <div class="experience-entry">
-      <h3>Student Mentor and Coordinator</h3>
-      <p class="company">Research Activities Club (RAC) · Marwadi University</p>
-      <p class="duration">
-        July 2023 - Present
-      </p>
-      <ul>
-        <li>Guide and mentor students in research methodologies, fostering skills in critical analysis and effective problem-solving.</li>
-        <li>Coordinate club activities, managing events, workshops, and discussions to promote research engagement.</li>
-        <li>Collaborate with faculty and peers to facilitate knowledge-sharing and skill development sessions.</li> 
-      </ul>
-    </div>
-
-    <div class="experience-entry">
-      <h3>Research Intern</h3>
-      <p class="company">Marwadi University · Internship</p>
-      <p class="duration">May 2024 - Jun 2024</p>
-      <ul>
-        <li>Engage in real-world projects, gaining practical experience in research methodologies and problem-solving.
-        </li>
-        <li>Work with experienced mentors, receiving feedback and refining research techniques.</li>
-        <li>Contribute to research papers or book chapters, building a foundation for future publications.</li>
-        <li>Develop skills in data analysis, critical thinking, research papers writing & formating, and technical
-          reporting.</li>
-      </ul>
-    </div>
-
-    <div class="experience-entry">
-      <h3>Junior Backend Developer</h3>
-      <p class="company">Maharshi Care · Healthcare Startup</p>
-      <p class="duration">July 2023 - December 2023</p>
-      <ul>
-        <li>Worked with the Model-View-Controller (MVC) framework to integrate databases, create and update API endpoints, and perform code refactoring as per lead developer requirements.</li>
-        <li>Utilized TypeScript for static typing to improve code quality, and leveraged Node.js and PostgreSQL for scalable backend development.</li>
-      </ul>
-    </div>
-
-    <h2>Volunteering</h2>
-    <div class="experience-entry">
-      <h3>Red Ceresent Youth </h3>
-      <p class="company">Bangladesh Red Crescent Society (BDRCS)</p>
-      <p class="duration">Nov 2016 - May 2021</p>
-      <ul>
-        <li>Participated in various social welfare activities and Organized health awareness programs.</li>
-        <li>Provided support to disaster-affected communities.</li>
-        <li>Served as a student leader at BIAM Model School and College, actively involved in both school initiatives
-          and the Red Crescent Youth in Bogura Unit.</li>
-        <li>Provided volunteer support for school events and community activities, which strengthened my leadership,
-          public speaking, and communication skills.</li>
-        <li>Participated as a volunteer in the 3rd Regional Red Crescent Youth Camp Bogra 2018.</li>
-        <li>Developed a foundational understanding of project management while enhancing collaboration and
-          organizational abilities.</li>
-      </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Project  -->
-  <section id="projects" class="content-section">
-    <h2>Projects</h2>
-    <div class="project-grid">
-
-
-      <div class="project-card">
-        <h3>Prediction of ASD: An Automated Django Application</h3>
-        <img src="project image/asd.jpg" alt="ASD Prediction Application" />
-        <!-- <p>An automated Django web app using machine learning and hyperparameter tuning to enhance Autism Spectrum Disorder (ASD) prediction accuracy.</p> -->
-        <a href="https://github.com/MasrukHabib/ASD_Predictor_ML_Django_App" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Numpy</span>
-          <span>Pandas</span>
-          <span>Django</span>
-          <span>Machine Learning</span>
-          <span>Hyperparameter Tuning</span>
+  <section id="publications" class="section">
+    <div class="section-content">
+      <h2><u>Publications:</u></h2>
+      <br>
+      <div class="publication-list">
+        <div class="publication-item">
+          <h3>
+            Machine Learning Classifiers and Hyperparameter Tuning to
+            Enhance Prediction of ASD
+          </h3>
+          <p>
+            <b>Published in:</b> 2024 2nd World Conference on
+            Communication & Computing (WCONF)
+          </p>
+          <a href="https://ieeexplore.ieee.org/document/10692172" target="_blank" class="btn btn-secondary">Read Full
+            Article</a>
+        </div>
+        <br>
+        <div class="publication-item">
+          <h3>
+            A Comparative Study on Hybrid Machine Learning Voting
+            Classifier Models for Alzheimer's Disease Prediction
+          </h3>
+          <p>
+            <b>Published in:</b> 2023 International Conference on
+            Artificial Intelligence for Innovations in Healthcare
+            Industries (ICAIIHI)
+          </p>
+          <a href="https://ieeexplore.ieee.org/document/10489772" target="_blank" class="btn btn-secondary">Read Full
+            Article</a>
         </div>
       </div>
-
-      <div class="project-card">
-        <h3>Hypothyroid Predictor with ML & Flask App </h3>
-        <img src="project image/hypo.jpg" alt="Hypothyroid_Predictor_ML_Flask_Application" />
-        <!-- <p>An automated Django web app using machine learning and hyperparameter tuning to enhance Autism Spectrum Disorder (ASD) prediction accuracy.</p> -->
-        <a href="https://github.com/MasrukHabib/Hypothyroid_Predictor_ML_Flask_App" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Numpy</span>
-          <span>Pandas</span>
-          <span>Flask</span>
-          <span>Machine Learning</span>
-          <span>Hyperparameter Tuning</span>
-        </div>
-      </div>
-
-       <div class="project-card">
-        <h3>Phishing website detection using ML </h3>
-        <img src="project image/web site phising detection ml.jpg" alt="project image" />
-        <!-- <p>An automated Django web app using machine learning and hyperparameter tuning to enhance Autism Spectrum Disorder (ASD) prediction accuracy.</p> -->
-        <a href="https://github.com/MasrukHabib/Phishing-website-detection-using-machine-learning.git" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Pandas</span>
-          <span>scikit learn</span>
-          <span> ML Algorithms</span>
-        </div>
-      </div>
-
-      <!-- <div class="project-card">
-        <h3>demo demo demo</h3>
-        <img src="project image/asd.jpg" alt="demo demo demo" />
-        <!-- <p></p> -->
-        <!-- <a href="https://github.com/MasrukHabib/ASD_Predictor_ML_Django_App" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Django</span>
-          <span>Machine Learning</span>
-          <span>Hyperparameter Tuning</span>
-        </div>
-      </div> --> 
-
-
-      <!-- <div class="project-card">
-        <h3>demo demo demo</h3>
-        <img src="project image/asd.jpg" alt="ASD Prediction Application" />
-        <!-- <p></p> -->
-        <!-- <a href="https://github.com/MasrukHabib/ASD_Predictor_ML_Django_App" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Django</span>
-          <span>Machine Learning</span>
-          <span>Hyperparameter Tuning</span>
-        </div>
-      </div> --> 
-
-      <div class="project-card">
-        <h3>Sahayata-Setu</h3>
-        <!--  -->
-        <img src="project image/sahayata-setu.jpg" alt="Portfolio Website" />
-        <!--  -->
-        <a href="https://github.com/Sahayata-Setu" target="_blank">View Project</a>
-        <div class="project-tags">
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>Figma</span>
-          <span>JavaScript</span>
-          <span>Dart</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>SQL</span>
-          <span>Git</span>
-        </div>
-      <!-- Node.js TypeScript Express.js Dart Figma JavaScript C++ Swift C HTML CSS SQL Git AWS -->
-    </div>
-  </section>  
-
-
-  <!-- Publications -->
-  <section id="publications" class="content-section">
-    <h2>Publications</h2>
-
-    <div class="publication-list">
-      <div class="education-entry">
-        <h3>Machine Learning Classifiers and Hyperparameter Tuning to Enhance Prediction of ASD: An Automated Django
-          Application</h3>
-        <p><b>Published in:</b> 2024 2nd World Conference on Communication & Computing (WCONF)</p>
-        <p class="publication-date">2024</p>
-        <p><b>DOI:</b> 10.1109/WCONF61366.2024.10692172</p>
-        <a href="https://ieeexplore.ieee.org/document/10692172" class="publication-link button" target="_blank">Read Full
-          Article</a>
-      </div>
-    </div>
-
-    <div class="education-entry">
-      <h3>
-        A Comparative Study on Hybrid Machine Learning Voting Classifier Models for Alzheimer's Disease Prediction</h3>
-      <p><b>Published in:</b> 2023 International Conference on Artificial Intelligence for Innovations in Healthcare
-        Industries (ICAIIHI)</p>
-      <p class="publication-date">2023</p>
-      <p><b>DOI:</b> 10.1109/ICAIIHI57871.2023.10489772</p>
-      <a href="https://ieeexplore.ieee.org/document/10489772" class="publication-link button" target="_blank">Read Full
-        Article</a>
-    </div>
-
-
-    <h2>Honors & Award</h2>
-
-
-    <div class="education-entry">
-      <h3>Award-winning team at Azadi Ka Amrit Mahotsav Hackathon-2022</h3>
-      <p><strong>Issued by Education Department (Higher & Technical), Government of Gujarat · Mar 2023</strong></p>
-      <p>Our team was honored with the appreciation award at Gujarat's Azadi Ka Amrit Mahotsav Hackathon 2022, a state-level event marking India's 75th year of independence. The hackathon served as a platform for innovators and problem-solvers from different sectors to propose solutions to pressing challenges. Our project was recognized for its innovative approach and practical impact, which earned us a noteworthy recognition. We are deeply grateful for the opportunity to contribute to this significant event and exhibit our skills at a state level.</p>
     </div>
   </section>
 
-  <!-- Blogs -->
-  <!-- <section id="blog" class="blog-entry">
-    <h2>Blogs</h2>
-    <div class="blog-list">
-      <div class="blog-entry">
-        <h3>demo demo demo demo demo </h3>
-        <p>Learn how to create a real-time chat application using WebSocket and Node.js</p>
-        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
-      </div>
-
-      <div class="blog-entry">
-        <h3>Getting Started with Machine Learning: A Beginner's Guide</h3>
-        <p>Explore the basics of machine learning and how to get started with your first project</p>
-        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
-      </div>
-
-      <div class="blog-entry">
-        <h3>Introduction to Deep Learning: Concepts and Applications</h3>
-        <p>Discover the fundamentals of deep learning and its applications in various fields</p>
-        <a href="https://masrukhabib.github.io/portfolio-website/" class="blog-link" target="_blank">Read Blog</a>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Contact Section -->
-  <section id="contact" class="content-section">
-    <h2>Contact</h2>
-    <div class="contact-container">
+  <section id="contact" class="section">
+    <div class="section-content">
+      <h2><u>Contact Me:</u></h2>
       <div class="contact-info">
-        <h3><u>Get in Touch</u></h3>
-        <p><b>Email:</b> masrukjim@gmail.com</p>
-        <p><b>Phone/WhatsApp:</b> +880 1771 931007</p>
-        <p><b>Location:</b> Rajkot, Gujarat, India</p>
-      </div>
+        <div class="contact-details">
+          <!-- <h3>Get in Touch</h3> -->
+          <br>
+          <p>
+            <i class="fab fa-linkedin"></i> Masruk Habib
+          </p>
+          <p><i class="fas fa-envelope"></i> masrukjim@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +880 1771 931007</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Rajkot, Gujarat, India
+          </p>
 
+
+        </div>
+        <!-- <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form> -->
+      </div>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/masruk-habib/" class="social-link" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/MasrukHabib" class="social-link" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://orcid.org/0009-0006-2231-8839" class="social-link" target="_blank">
-          <i class="fas fa-id-badge"></i> ORCiD
-        </a>
+        <a href="https://www.linkedin.com/in/masruk-habib/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/MasrukHabib" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://orcid.org/0009-0006-2231-8839" target="_blank"><i class="fab fa-orcid"></i></a>
       </div>
     </div>
   </section>
-
-  </style>
+  </main>
 
   <footer>
-    <p>© 2024 Masruk Habib. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2024 Masruk Habib. All Rights Reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/masruk-habib/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/MasrukHabib" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
   </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
