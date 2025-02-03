@@ -1,110 +1,106 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Show all sections by default
-  const sections = document.querySelectorAll(".content-section");
-  sections.forEach((section) => {
-    section.style.display = "block";
-    section.style.opacity = "1";
-  });
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll("nav a");
+  const homeSection = document.getElementById("home");
 
-  // Add active state to the first navigation button
-  updateNavigationState("about");
+  // Smooth scrolling for navigation
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetSectionId = link.getAttribute("data-section");
+      const targetSection = document.getElementById(targetSectionId);
 
-  // Add event listeners to navigation buttons
-  const buttons = document.querySelectorAll("nav button");
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const sectionId = button.getAttribute("data-section-id");
-      showSection(sectionId);
+      // Remove active class from all sections and nav links
+      sections.forEach((section) => section.classList.remove("active"));
+      navLinks.forEach((navLink) => navLink.classList.remove("active"));
+
+      // Add active class to target section and nav link
+      targetSection.classList.add("active");
+      link.classList.add("active");
+
+      // Smooth scroll to section
+      targetSection.scrollIntoView({ behavior: "smooth" });
     });
   });
-});
 
-// Function to show selected section
-function showSection(sectionId) {
-  const selectedSection = document.getElementById(sectionId);
-  if (selectedSection) {
-    selectedSection.scrollIntoView({ behavior: "smooth" });
-    updateNavigationState(sectionId);
+  // Skills progress bar animation
+  const skillBars = document.querySelectorAll(".skill-bar");
+  const observerOptions = {
+    threshold: 0.5,
+  };
+
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const percentage = progressBar.dataset.percentage;
+        progressBar.style.width = `${percentage}%`;
+      }
+    });
+  }, observerOptions);
+
+  skillBars.forEach((bar) => skillObserver.observe(bar));
+
+  // Project filter functionality
+  const projectFilter = document.querySelector(".project-filter");
+  const projects = document.querySelectorAll(".project-card");
+
+  if (projectFilter) {
+    projectFilter.addEventListener("change", (e) => {
+      const filterValue = e.target.value;
+
+      projects.forEach((project) => {
+        if (filterValue === "all" || project.classList.contains(filterValue)) {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
+      });
+    });
   }
-}
 
-// Function to update navigation button states
-function updateNavigationState(sectionId) {
-  const buttons = document.querySelectorAll("nav button");
-  buttons.forEach((button) => {
-    // Remove active class from all buttons
-    button.classList.remove("active");
-
-    // Add active class to current section button
-    if (button.getAttribute("data-section-id") === sectionId) {
-      button.classList.add("active");
-    }
-  });
-}
-
-// Add CSS styles for animations
-const style = document.createElement("style");
-style.textContent = `
-     .content-section {
-         opacity: 1;
-         transition: opacity 0.3s ease-in-out;
-     }
-     
-     nav button.active {
-         background: #2c3e50 !important;
-         color: white !important;
-     }
- `;
-document.head.appendChild(style);
-
-// Optional: Add keyboard navigation
-document.addEventListener("keydown", (e) => {
-  const sections = [
-    "about",
-    "education",
-    "skills",
-    "experience",
-    "projects",
-    "publications",
-    "contact",
-  ];
-  const currentSection = document.querySelector(
-    '.content-section[style*="display: block"]'
-  );
-  const currentIndex = sections.indexOf(currentSection.id);
-
-  if (e.key === "ArrowRight" || e.key === "ArrowDown") {
-    const nextIndex = (currentIndex + 1) % sections.length;
-    showSection(sections[nextIndex]);
-  } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
-    const prevIndex = (currentIndex - 1 + sections.length) % sections.length;
-    showSection(sections[prevIndex]);
+  // Dark mode toggle (optional enhancement)
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
   }
 });
 
 // Optional: Add scroll-based animations
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.transform = "translateY(0)";
-        entry.target.style.opacity = "1";
+const animateOnScroll = () => {
+  const scrollElements = document.querySelectorAll(".scroll-animate");
+
+  const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+  };
+
+  const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 1.25)) {
+        displayScrollElement(el);
+      } else {
+        hideScrollElement(el);
       }
     });
-  },
-  {
-    threshold: 0.1,
-  }
-);
+  };
 
-// Apply animations to section elements
-document
-  .querySelectorAll(".education-entry, .project-card, .skill-category")
-  .forEach((el) => {
-    el.style.transition = "transform 0.5s ease-out, opacity 0.5s ease-out";
-    el.style.transform = "translateY(20px)";
-    el.style.opacity = "0";
-    observer.observe(el);
+  window.addEventListener("scroll", () => {
+    handleScrollAnimation();
   });
+};
 
-  
+animateOnScroll();
