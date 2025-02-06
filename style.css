@@ -100,6 +100,7 @@ nav a:hover::after, nav a.active::after {
 /* Sections */
 .section {
   display: none;
+  text-align: justify;
   padding: 3rem 0;
   opacity: 0;
   transform: translateY(20px);
@@ -117,6 +118,46 @@ nav a:hover::after, nav a.active::after {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Category Container */
+/* Skills Category Container */
+.skills-category {
+  background-color: var(--white-color); /* Match background color */
+  padding: 1.5rem; /* Adjust padding for balance */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* List Style */
+.skills-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-category li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.skills-category li i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  color: var(--primary-color); /* Ensure the icon color matches */
+}
+
+.skills-category li:hover {
+  color: var(--secondary-color); /* Match the hover effect */
+}
+
+/* Adjust the section layout on mobile */
+@media (max-width: 768px) {
+  .skills-categories {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
 }
 
 /* Buttons */
@@ -148,6 +189,35 @@ nav a:hover::after, nav a.active::after {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
+
+/* Up to Nav Button Styles */
+.up-to-nav-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%; /* This makes it round */
+  width: 60px;  /* Set width and height for a consistent round shape */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensure it's above other content */
+}
+.up-to-nav-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+
+
+
+
 
 /* Social Links */
 .social-links {
