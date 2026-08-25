@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masruk Habib — AI Engineer & Machine Learning Researcher</title>
+  <meta name="description" content="Portfolio of Masruk Habib — Computer Engineer, R&D Engineer at GoScurry.ai, AI/ML & LLM researcher. IEEE-published researcher, hackathon winner, based in Dhaka, Bangladesh." />
+  <meta name="author" content="Masruk Habib" />
+  <meta name="keywords" content="Masruk Habib, AI Engineer, Machine Learning, LLM, RAG, Data Analyst, Researcher, Dhaka, Bangladesh" />
+  <meta property="og:title" content="Masruk Habib — AI Engineer & ML Researcher" />
+  <meta property="og:description" content="IEEE-published AI/ML researcher and R&D Engineer building intelligent systems with LLMs, RAG and data-driven insights." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23e879f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23070b16'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EMH%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Masruk Habib",
+    "jobTitle": "R&D Engineer | AI/ML Researcher",
+    "email": "mailto:masrukjim@gmail.com",
+    "telephone": "+8801580996266",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Marwadi University" },
+    "worksFor": { "@type": "Organization", "name": "GoScurry.ai" },
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Large Language Models", "Retrieval-Augmented Generation", "Data Analysis"],
+    "sameAs": [
+      "https://www.linkedin.com/in/masruk-habib",
+      "https://github.com/MasrukHabib",
+      "https://public.tableau.com/app/profile/masruk.habib"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-mark">MH<span>.</span></div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner container">
+      <a href="#home" class="logo" aria-label="Masruk Habib — home">MH<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-cta-mobile"><a href="assets/Masruk-Habib-CV.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-ghost"><i class="fa-solid fa-download" aria-hidden="true"></i>&nbsp;CV</a></li>
+      </ul>
+      <a href="assets/Masruk-Habib-CV.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-outline nav-cv"><i class="fa-solid fa-download" aria-hidden="true"></i>&nbsp;Download CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="hero-badge"><span class="pulse-dot" aria-hidden="true"></span> Open to research collaborations &amp; consulting</p>
+        <h1 class="hero-title">Hi, I'm <span class="grad-text">Masruk Habib</span></h1>
+        <h2 class="hero-sub"><span id="typed" aria-label="AI Engineer"></span><span class="caret" aria-hidden="true">|</span></h2>
+        <p class="hero-desc">
+          Computer Engineer turning research into real-world impact — I design
+          <strong>LLM &amp; RAG systems</strong>, machine-learning pipelines and data products
+          across healthcare, mobility and business intelligence.
+          IEEE-published researcher. Mentor. Hackathon winner.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>&nbsp;View My Work</a>
+          <a href="assets/Masruk-Habib-CV.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-download" aria-hidden="true"></i>&nbsp;Download CV</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/MasrukHabib" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://scholar.google.com/scholar?q=author%3A%22Masruk+Habib%22" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+          <a href="https://public.tableau.com/app/profile/masruk.habib" target="_blank" rel="noopener" aria-label="Tableau Public dashboards" title="Tableau Public"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></a>
+          <a href="mailto:masrukjim@gmail.com" aria-label="Email Masruk" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-2">
+        <div class="avatar-card" data-tilt>
+          <div class="avatar-ring" aria-hidden="true"></div>
+          <div class="avatar-core" aria-hidden="true">MH</div>
+          <div class="orbit-chip chip-1 mono">Python</div>
+          <div class="orbit-chip chip-2 mono">LLM · RAG</div>
+          <div class="orbit-chip chip-3 mono">ML / DL</div>
+          <div class="orbit-chip chip-4 mono">SQL</div>
+          <div class="orbit-chip chip-5 mono">AWS</div>
+          <div class="orbit-chip chip-6 mono">Tableau</div>
+        </div>
+        <div class="hero-card-tag glass" aria-hidden="true">
+          <i class="fa-solid fa-award tag-icon" ></i>
+          <div><strong>Hackathon Winner</strong><small>Govt. of Gujarat · 2022</small></div>
+        </div>
+        <div class="hero-card-tag glass tag-b" aria-hidden="true">
+          <i class="fa-solid fa-book-open tag-icon"></i>
+          <div><strong>5+ Papers</strong><small>IEEE &amp; int'l conferences</small></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+      <span class="mouse" aria-hidden="true"><span></span></span>
+    </a>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats-band" aria-label="Career statistics">
+    <div class="container stats-grid">
+      <div class="stat reveal"><span class="stat-num" data-count="5" data-suffix="+">0</span><span class="stat-label">Research Publications</span></div>
+      <div class="stat reveal delay-1"><span class="stat-num" data-count="10" data-suffix="+">0</span><span class="stat-label">Projects on GitHub</span></div>
+      <div class="stat reveal delay-2"><span class="stat-num" data-count="37" data-suffix="">0</span><span class="stat-label">Training Sessions Led</span></div>
+      <div class="stat reveal delay-3"><span class="stat-num" data-count="4" data-suffix="">0</span><span class="stat-label">Industry Roles Held</span></div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// who i am</span>
+        <h2 class="sec-title">About <span class="grad-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">
+            I'm a passionate <strong>AI Engineer, Data Analyst and research enthusiast</strong> with a B.Tech in
+            Computer Engineering, specializing in Artificial Intelligence, Machine Learning,
+            <strong>Large Language Models (LLMs)</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong>.
+          </p>
+          <p>
+            Currently, I work as a <strong>Research &amp; Development Engineer at GoScurry.ai</strong>, contributing to
+            AI-driven solutions involving LLMs, RAG pipelines and intelligent automation. Previously, as a
+            <strong>Data Analyst at Jatri</strong>, I analysed sales, marketing, finance and supply-chain data to support
+            decision-making — building dashboards, automating reports and tracking KPIs. I've also shipped backend
+            features for <strong>CRM Squirrel</strong> using Python-based technologies.
+          </p>
+          <p>
+            My research spans <strong>ASD prediction, Alzheimer's detection, psychological well-being assessment and
+            AI-driven drug-interaction analysis</strong> — published at IEEE international conferences. As a Student
+            Research Mentor at Marwadi University's Research Activities Club, I guided three batches of students through
+            research methodology and publication, leading 37 training sessions along the way.
+          </p>
+          <ul class="trust-list">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Peer-reviewed papers with verifiable IEEE DOIs</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> State-level hackathon winner (Govt. of Gujarat)</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Trusted mentor for 3 student batches</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Production experience: LLM apps, analytics &amp; backends</li>
+          </ul>
+        </div>
+        <aside class="about-side reveal delay-2">
+          <div class="info-card glass">
+            <img class="about-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=900&auto=format&fit=crop" alt="Abstract network of glowing connections representing artificial intelligence" loading="lazy" onerror="this.classList.add('img-dead')" />
+            <ul class="fact-list">
+              <li><span class="fact-k"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Degree</span><span class="fact-v">B.Tech, Computer Engineering<br /><small>Marwadi University · First Class w/ Distinction</small></span></li>
+              <li><span class="fact-k"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Based in</span><span class="fact-v">Dhaka, Bangladesh</span></li>
+              <li><span class="fact-k"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Currently</span><span class="fact-v">R&amp;D Engineer @ GoScurry.ai</span></li>
+              <li><span class="fact-k"><i class="fa-solid fa-language" aria-hidden="true"></i> Languages</span><span class="fact-v">Bengali (native) · English (professional) · Hindi</span></li>
+              <li><span class="fact-k"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</span><span class="fact-v"><a href="mailto:masrukjim@gmail.com">masrukjim@gmail.com</a></span></li>
+              <li><span class="fact-k"><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</span><span class="fact-v"><a href="tel:+8801580996266">+880 1580-996266</a></span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// where i've worked</span>
+        <h2 class="sec-title">Experience &amp; <span class="grad-text">Journey</span></h2>
+      </div>
+
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card glass">
+            <header class="tl-head">
+              <h3>R&amp;D Engineer</h3><span class="tl-badge">Current</span>
+            </header>
+            <p class="tl-org"><i class="fa-solid fa-building" aria-hidden="true"></i> GoScurry.ai · Dhaka, Bangladesh</p>
+            <p class="tl-date mono">Apr 2026 — Present</p>
+            <ul>
+              <li>Building AI-driven products with LLMs, RAG pipelines and intelligent automation.</li>
+              <li>Designing practical AI systems that boost productivity, communication and business intelligence.</li>
+            </ul>
+            <div class="tags"><span>LLMs</span><span>RAG</span><span>Automation</span><span>Python</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card glass">
+            <header class="tl-head"><h3>Data Analyst</h3></header>
+            <p class="tl-org"><i class="fa-solid fa-building" aria-hidden="true"></i> Jatri · Gulshan, Dhaka</p>
+            <p class="tl-date mono">Sep 2025 — Apr 2026</p>
+            <ul>
+              <li>Analysed sales, marketing, finance and supply-chain data to guide business decisions.</li>
+              <li>Built dashboards &amp; automated reporting; tracked KPIs like sales growth and inventory trends.</li>
+              <li>Supported demand forecasting and surfaced growth opportunities with cross-functional teams.</li>
+            </ul>
+            <div class="tags"><span>Analytics</span><span>Dashboards</span><span>KPIs</span><span>Forecasting</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card glass">
+            <header class="tl-head"><h3>Backend Developer</h3></header>
+            <p class="tl-org"><i class="fa-solid fa-building" aria-hidden="true"></i> CRM Squirrel · Lampang, Thailand (Remote)</p>
+            <p class="tl-date mono">Aug 2025 — Sep 2025</p>
+            <ul>
+              <li>Contributed to backend development, API integration and scalable system design.</li>
+              <li>Shipped Python-based services powering CRM workflows.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>REST APIs</span><span>System Design</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card glass">
+            <header class="tl-head"><h3>Student Research Mentor</h3></header>
+            <p class="tl-org"><i class="fa-solid fa-building" aria-hidden="true"></i> Marwadi University, Dept. of CE · Rajkot, India</p>
+            <p class="tl-date mono">Nov 2023 — Apr 2025</p>
+            <ul>
+              <li>Guided <strong>3 batches</strong> of students through the full research-paper writing &amp; publication process.</li>
+              <li>Led <strong>37 sessions</strong> at the Research Activity Club (RAC) on ML implementation &amp; technical writing.</li>
+              <li>Co-authored and published 2 papers with international collaborators.</li>
+            </ul>
+            <div class="tags"><span>Mentorship</span><span>Research Methods</span><span>Academic Writing</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="tl-card glass">
+            <header class="tl-head"><h3>Research Intern — SRIT</h3></header>
+            <p class="tl-org"><i class="fa-solid fa-building" aria-hidden="true"></i> Marwadi University · Rajkot, India</p>
+            <p class="tl-date mono">May 2024 — Jun 2024</p>
+            <ul>
+              <li>Authored and published 1 research paper during the internship period under expert mentorship.</li>
+            </ul>
+            <div class="tags"><span>Machine Learning</span><span>Publication</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="edu-grid">
+        <article class="edu-card glass reveal">
+          <i class="fa-solid fa-user-graduate edu-icon" aria-hidden="true"></i>
+          <h3>B.Tech — Computer Engineering</h3>
+          <p class="edu-school">Marwadi University, Rajkot, India</p>
+          <p class="tl-date mono">2021 — 2025</p>
+          <p class="edu-note">CGPA <strong>7.64 / 10</strong> · First Class with Distinction</p>
+        </article>
+        <article class="edu-card glass reveal delay-1">
+          <i class="fa-solid fa-school edu-icon" aria-hidden="true"></i>
+          <h3>Science Group — SSC &amp; HSC</h3>
+          <p class="edu-school">BIAM Model School &amp; College, Bogura, Bangladesh</p>
+          <p class="tl-date mono">2018 — 2020</p>
+          <p class="edu-note">GPA <strong>5.00 / 5.00</strong> in both SSC &amp; HSC</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// things i've built</span>
+        <h2 class="sec-title">Featured <span class="grad-text">Projects</span></h2>
+        <p class="sec-sub">Real systems solving healthcare, security and business problems — every repo is public and verifiable.</p>
+      </div>
+
+      <div class="proj-grid">
+
+        <article class="proj-card glass reveal" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Medical monitoring technology representing MediGuard AI" loading="lazy" onerror="this.classList.add('img-dead')"><span class="proj-flag">Flagship</span></div>
+          <div class="proj-body">
+            <h3>MediGuard AI</h3>
+            <p>LLM-powered drug interaction &amp; side-effect predictor with a fine-tuned model, data preprocessing and a <strong>RAG chat assistant</strong> delivering patient-specific medication safety insights via Streamlit.</p>
+            <div class="tags"><span>LLM</span><span>RAG</span><span>Streamlit</span><span>Healthcare</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MediGuardAI" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal delay-1" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop" alt="Close-up of circuit board representing intelligent systems" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>Multilingual RAG System</h3>
+            <p>A retrieval-augmented generation system answering questions across languages — combining embeddings, vector search and prompt engineering for grounded responses.</p>
+            <div class="tags"><span>RAG</span><span>NLP</span><span>Embeddings</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib/Multilingual-Retrieval-Augmented-Generation-RAG-System" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal delay-2" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=900&auto=format&fit=crop" alt="White humanoid robot representing collaborative robotics" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>UR3 CobotOps — Predictive Maintenance</h3>
+            <p>Enhanced UR3 cobot efficiency using <strong>ARIMA, LSTM, K-Means and classifiers</strong> for predictive maintenance, real-time anomaly detection and error prediction on the UCI dataset.</p>
+            <div class="tags"><span>LSTM</span><span>ARIMA</span><span>Anomaly Detection</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib/UR3-CobotOps-Enhancing-Cobot-Efficiency-with-ML" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=900&auto=format&fit=crop" alt="Dark code editor representing the Django ASD prediction application" loading="lazy" onerror="this.classList.add('img-dead')"><span class="proj-flag">Published @ IEEE WCONF</span></div>
+          <div class="proj-body">
+            <h3>ASD Predictor — Django App</h3>
+            <p>Automated Django system for early Autism Spectrum Disorder detection using SVM, LR, ET &amp; DT. Achieved perfect precision/recall after hyperparameter tuning; published at <strong>WCONF 2024</strong>.</p>
+            <div class="tags"><span>Django</span><span>SVM</span><span>Healthcare AI</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib/ASD_Predictor_ML_Django_App" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal delay-1" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=900&auto=format&fit=crop" alt="Peaceful open sky representing psychological wellbeing prediction" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>Psychological Well-being Prediction</h3>
+            <p>Intelligent web app predicting well-being with Logistic Regression, Trees, Random Forest, Gradient Boosting &amp; SVM — plus <strong>hybrid tuning</strong> (Grid, Random &amp; Bayesian optimization).</p>
+            <div class="tags"><span>Classification</span><span>Bayesian Opt</span><span>Mental Health</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib/Psychological_Wellbeingness_Prediction" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal delay-2" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=900&auto=format&fit=crop" alt="Source code on screen representing the Flask hypothyroidism prediction app" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>Hypothyroid Predictor — Flask App</h3>
+            <p>Research-based <strong>real-time Flask web app</strong> for hypothyroidism prediction, pairing advanced ML with hyperparameter tuning for accurate, reliable health assessments.</p>
+            <div class="tags"><span>Flask</span><span>ML</span><span>Deployment</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;GitHub Profile</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=900&auto=format&fit=crop" alt="Green digital code pattern representing phishing website detection" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>Phishing Website Detection</h3>
+            <p>Machine-learning classifier that flags malicious websites from URL &amp; page features — protecting users before they click.</p>
+            <div class="tags"><span>Security</span><span>Classification</span><span>Feature Engineering</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/MasrukHabib/Phishing-website-detection-using-machine-learning" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github" aria-hidden="true"></i>&nbsp;Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal delay-1" data-tilt>
+          <div class="proj-media"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=900&auto=format&fit=crop" alt="Analytics dashboard charts representing Tableau visualizations" loading="lazy" onerror="this.classList.add('img-dead')"></div>
+          <div class="proj-body">
+            <h3>Tableau Dashboards</h3>
+            <p>Interactive public vizzes: Marketing Campaign Analytics, Sales Superstore History and HR Operations — turning raw data into decisions.</p>
+            <div class="tags"><span>Tableau</span><span>KPIs</span><span>Storytelling</span></div>
+            <div class="proj-links">
+              <a href="https://public.tableau.com/app/profile/masruk.habib" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>&nbsp;View Live</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS + AWARD ================= -->
+  <section id="publications" class="section section-alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// peer-reviewed work</span>
+        <h2 class="sec-title">Research &amp; <span class="grad-text">Publications</span></h2>
+        <p class="sec-sub">Every claim on this page can be verified — each DOI below links directly to the publisher's record.</p>
+      </div>
+
+      <ol class="pub-list">
+        <li class="pub-item glass reveal">
+          <span class="pub-year mono">2024</span>
+          <div class="pub-main">
+            <h3>Machine Learning Classifiers and Hyperparameter Tuning to Enhance Prediction of ASD: An Automated Django Application</h3>
+            <p class="pub-venue"><i class="fa-solid fa-book" aria-hidden="true"></i> 2024 2nd World Conference on Communication &amp; Computing (WCONF) · IEEE</p>
+          </div>
+          <a class="btn btn-sm btn-ghost pub-doi" href="https://doi.org/10.1109/WCONF61366.2024.10692172" target="_blank" rel="noopener">DOI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </li>
+        <li class="pub-item glass reveal delay-1">
+          <span class="pub-year mono">2024</span>
+          <div class="pub-main">
+            <h3>Predicting Psychological Well-being Using Machine Learning with Hybrid Hyperparameter Tuning Techniques</h3>
+            <p class="pub-venue"><i class="fa-solid fa-book" aria-hidden="true"></i> 2024 Int'l Conference on AI &amp; Emerging Technology (Global AI Summit) · IEEE</p>
+          </div>
+          <a class="btn btn-sm btn-ghost pub-doi" href="https://doi.org/10.1109/GlobalAISummit62156.2024.10947775" target="_blank" rel="noopener">DOI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </li>
+        <li class="pub-item glass reveal delay-2">
+          <span class="pub-year mono">2023</span>
+          <div class="pub-main">
+            <h3>A Comparative Study on Hybrid Machine Learning Voting Classifier Models for Alzheimer's Disease Prediction</h3>
+            <p class="pub-venue"><i class="fa-solid fa-book" aria-hidden="true"></i> 2023 Int'l Conference on AI for Innovations in Healthcare (ICAIIHI) · IEEE</p>
+          </div>
+          <a class="btn btn-sm btn-ghost pub-doi" href="https://doi.org/10.1109/ICAIIHI57871.2023.10489772" target="_blank" rel="noopener">DOI <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </li>
+        <li class="pub-item glass reveal">
+          <span class="pub-year mono">—</span>
+          <div class="pub-main">
+            <h3>Augmenting Human Capabilities: AI's Impact on Collaborative Workflows</h3>
+            <p class="pub-venue"><i class="fa-solid fa-book" aria-hidden="true"></i> Research Publication</p>
+          </div>
+        </li>
+        <li class="pub-item glass reveal delay-1">
+          <span class="pub-year mono">—</span>
+          <div class="pub-main">
+            <h3>A Roadmap to a Sustainable Future: Empowering Businesses and Consumers Through AI-Driven Green Marketing</h3>
+            <p class="pub-venue"><i class="fa-solid fa-book" aria-hidden="true"></i> Research Publication</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="award-banner reveal">
+        <div class="award-left">
+          <i class="fa-solid fa-trophy award-trophy" aria-hidden="true"></i>
+        </div>
+        <div class="award-right">
+          <span class="mono award-kicker">State-level recognition</span>
+          <h3>Winner — Azadi Ka Amrit Mahotsav Hackathon 2022</h3>
+          <p>Awarded by the <strong>Government of Gujarat</strong> for an innovative project with practical impact — competing against teams from across the state.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// my toolbox</span>
+        <h2 class="sec-title">Skills &amp; <span class="grad-text">Certifications</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-bars reveal">
+          <h3 class="col-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Core Strengths</h3>
+          <div class="bar-row"><span class="bar-name">Python &amp; Data Analysis</span><div class="bar"><span class="bar-fill" data-w="95"></span></div><span class="bar-val mono">95%</span></div>
+          <div class="bar-row"><span class="bar-name">Machine &amp; Deep Learning</span><div class="bar"><span class="bar-fill" data-w="90"></span></div><span class="bar-val mono">90%</span></div>
+          <div class="bar-row"><span class="bar-name">LLMs &amp; RAG Pipelines</span><div class="bar"><span class="bar-fill" data-w="88"></span></div><span class="bar-val mono">88%</span></div>
+          <div class="bar-row"><span class="bar-name">SQL &amp; Databases</span><div class="bar"><span class="bar-fill" data-w="85"></span></div><span class="bar-val mono">85%</span></div>
+          <div class="bar-row"><span class="bar-name">Data Viz &amp; Tableau</span><div class="bar"><span class="bar-fill" data-w="85"></span></div><span class="bar-val mono">85%</span></div>
+          <div class="bar-row"><span class="bar-name">AWS &amp; Cloud</span><div class="bar"><span class="bar-fill" data-w="75"></span></div><span class="bar-val mono">75%</span></div>
+        </div>
+
+        <div class="skill-groups">
+          <div class="skill-group glass reveal delay-1">
+            <h3 class="col-title"><i class="fa-solid fa-brain" aria-hidden="true"></i> AI / ML</h3>
+            <div class="chips">
+              <span>Machine Learning</span><span>Deep Learning</span><span>LLMs</span><span>RAG Systems</span><span>Predictive Modeling</span><span>Hyperparameter Tuning</span><span>Anomaly Detection</span><span>Time Series (ARIMA/LSTM)</span>
+            </div>
+          </div>
+          <div class="skill-group glass reveal delay-2">
+            <h3 class="col-title"><i class="fa-solid fa-code" aria-hidden="true"></i> Development</h3>
+            <div class="chips">
+              <span>Python</span><span>OOP</span><span>Django</span><span>Flask</span><span>Streamlit</span><span>REST APIs</span><span>Web Development</span><span>UI/UX</span>
+            </div>
+          </div>
+          <div class="skill-group glass reveal delay-3">
+            <h3 class="col-title"><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud &amp; Infra</h3>
+            <div class="chips">
+              <span>AWS</span><span>SQL · Oracle</span><span>Postman</span><span>Linux</span><span>Networking Basics (CCNA)</span><span>Git &amp; GitHub</span>
+            </div>
+          </div>
+          <div class="skill-group glass reveal">
+            <h3 class="col-title"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Analytics</h3>
+            <div class="chips">
+              <span>Tableau</span><span>Dashboarding</span><span>KPI Tracking</span><span>Forecasting</span><span>Data Storytelling</span><span>MS Office</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs reveal" aria-label="Certifications">
+        <h3 class="col-title certs-title"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certified Knowledge</h3>
+        <div class="marquee" data-dir="left">
+          <div class="marquee-track">
+            <span class="cert-pill"><strong>Explore ML using Python</strong><em>Infosys Springboard · 2024</em></span>
+            <span class="cert-pill"><strong>AWS Cloud Foundations</strong><em>AWS Academy · 2023</em></span>
+            <span class="cert-pill"><strong>Complete Tableau Bootcamp</strong><em>Infosys Springboard · 2023</em></span>
+            <span class="cert-pill"><strong>Database Programming with SQL</strong><em>Oracle Academy · 2022</em></span>
+            <span class="cert-pill"><strong>CCNAv7: Intro to Networks</strong><em>Cisco Academy · 2023</em></span>
+            <span class="cert-pill"><strong>NDG Linux Essentials</strong><em>Cisco Academy · 2023</em></span>
+          </div>
+        </div>
+        <div class="marquee" data-dir="right">
+          <div class="marquee-track">
+            <span class="cert-pill"><strong>Python Data Structures</strong><em>Coursera · 2022</em></span>
+            <span class="cert-pill"><strong>Programming for Everybody</strong><em>Coursera · 2022</em></span>
+            <span class="cert-pill"><strong>Postman API Fundamentals</strong><em>Postman · 2023</em></span>
+            <span class="cert-pill"><strong>Project Management Foundations</strong><em>LinkedIn · 2023</em></span>
+            <span class="cert-pill"><strong>SRIT Research Training</strong><em>Marwadi University · 2024</em></span>
+            <span class="cert-pill"><strong>Digital Security Essentials</strong><em>Professional Certification</em></span>
+            <span class="cert-pill"><strong>ML with Python: Foundations</strong><em>Professional Certification</em></span>
+            <span class="cert-pill"><strong>Claude Code 101</strong><em>Certificate of Completion</em></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section contact-section">
+    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// get in touch</span>
+        <h2 class="sec-title">Let's Build Something <span class="grad-text">Intelligent</span></h2>
+        <p class="sec-sub">Have a project, research idea or role in mind? My inbox is always open — I usually reply within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a class="contact-card glass reveal" href="mailto:masrukjim@gmail.com">
+            <i class="fa-solid fa-envelope cc-icon" aria-hidden="true"></i>
+            <div><span>Email</span><strong>masrukjim@gmail.com</strong></div>
+          </a>
+          <a class="contact-card glass reveal delay-1" href="tel:+8801580996266">
+            <i class="fa-solid fa-phone cc-icon" aria-hidden="true"></i>
+            <div><span>Phone / WhatsApp</span><strong>+880 1580-996266</strong></div>
+          </a>
+          <div class="contact-card glass reveal delay-2">
+            <i class="fa-solid fa-location-dot cc-icon" aria-hidden="true"></i>
+            <div><span>Location</span><strong>Gulshan, Dhaka — Bangladesh</strong></div>
+          </div>
+          <div class="contact-socials reveal delay-3">
+            <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/MasrukHabib" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://scholar.google.com/scholar?q=author%3A%22Masruk+Habib%22" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+            <a href="https://public.tableau.com/app/profile/masruk.habib" target="_blank" rel="noopener" aria-label="Tableau Public" title="Tableau Public"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form glass reveal delay-2" autocomplete="off">
+          <div class="form-row">
+            <label for="cf-name">Your Name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Your Email</label>
+            <input id="cf-email" name="email" type="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-row">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>&nbsp;Send Message</button>
+          <p class="form-note"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Opens your email app — nothing is stored on this site.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo logo-sm">MH<span>.</span></a>
+      <p class="footer-quote">"Turning data into decisions, and models into impact."</p>
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© <span id="year">2026</span> Masruk Habib · Designed &amp; engineered with care.</p>
+    </div>
+  </footer>
+
+  <button id="to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
