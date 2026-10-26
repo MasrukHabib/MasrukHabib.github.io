@@ -659,6 +659,7 @@ main, section, header, footer { position: relative; z-index: 1; }
 }
 .tl-org { color: var(--c1); font-size: 0.92rem; margin-top: 4px; }
 .tl-org i { font-size: .8rem; margin-right: 4px; }
+.tl-org a:hover { text-decoration: underline; }
 .tl-date { color: var(--faint); font-size: 0.8rem; margin-top: 4px; letter-spacing: .04em; }
 .tl-card ul { margin-top: 14px; display: grid; gap: 8px; }
 .tl-card ul li {
