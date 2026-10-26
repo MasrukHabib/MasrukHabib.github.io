@@ -752,6 +752,7 @@ main, section, header, footer { position: relative; z-index: 1; }
   margin-bottom: 10px; letter-spacing: -0.01em;
 }
 .proj-card:hover .proj-body h3 { color: var(--c1); transition: color .3s ease; }
+.proj-body h3 a:hover { text-decoration: underline; }
 .proj-body > p { color: var(--muted); font-size: 0.93rem; flex: 1; }
 .proj-body > p strong { color: var(--txt); font-weight: 600; }
 .proj-body .tags { margin-block: 16px 18px; }
