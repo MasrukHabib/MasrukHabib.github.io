@@ -445,6 +445,7 @@ main, section, header, footer { position: relative; z-index: 1; }
 .chip-4 { bottom: 6%; right: -4%; animation-delay: -2.7s; color: var(--c1); }
 .chip-5 { top: 48%; right: -20%; animation-delay: -3.6s; color: #fbbf24; }
 .chip-6 { top: -4%; right: 24%; animation-delay: -4.5s; color: var(--ok); }
+.chip-7 { top: 44%; left: -22%; animation-delay: -5.4s; color: #fb7185; }
 @keyframes floaty { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-11px);} }
 
 .hero-card-tag {
@@ -486,6 +487,7 @@ main, section, header, footer { position: relative; z-index: 1; }
   .chip-1, .chip-4 { left: -2%; }
   .chip-2, .chip-3 { right: -2%; left: auto; }
   .chip-5 { right: -6%; }
+  .chip-7 { left: -6%; }
   .hero-card-tag.tag-b { top: -2%; right: -2%; }
   .hero-card-tag.tag-a { bottom: -4%; left: -2%; }
   .orbit-chip { font-size: .66rem; padding: 6px 10px; }

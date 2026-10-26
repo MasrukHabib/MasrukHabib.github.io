@@ -137,6 +137,8 @@
   if (typedEl) {
     const roles = [
       "AI Engineer",
+      "Entrepreneur",
+      "Co-Founder @ Sohoj Dokan",
       "Machine Learning Researcher",
       "R&D Engineer @ GoScurry.ai",
       "LLM & RAG Specialist",
