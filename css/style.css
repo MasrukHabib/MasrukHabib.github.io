@@ -537,6 +537,8 @@ main, section, header, footer { position: relative; z-index: 1; }
 .about-text p + p { margin-top: 16px; }
 .about-text p { color: var(--muted); }
 .about-text strong { color: var(--txt); font-weight: 600; }
+.about-text a { color: var(--c1); }
+.about-text a:hover { text-decoration: underline; }
 
 .trust-list { margin-top: 26px; display: grid; gap: 12px; }
 .trust-list li {
