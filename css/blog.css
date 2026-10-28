@@ -10,7 +10,9 @@
 .blog-list { padding-bottom: 136px; }
 
 .post-featured { display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden; margin-bottom: 40px; }
-.post-featured .post-media { height: 100%; min-height: 320px; border-bottom: 0; border-right: 1px solid var(--border-subtle); }
+.post-featured .post-media { height: auto; min-height: 340px; border-bottom: 0; border-right: 1px solid var(--border-subtle); }
+/* the photo fills the panel instead of setting the card's height */
+.post-featured .post-media img { position: absolute; inset: 0; }
 .post-featured .post-body { padding: clamp(24px, 4vw, 48px); justify-content: center; }
 .post-featured h2 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 700; letter-spacing: var(--tracking-tight); line-height: 1.2; color: var(--text-primary); transition: color var(--dur-base) ease; }
 .post-featured:hover h2 { color: var(--accent-bright); }
@@ -85,7 +87,7 @@
 .byline .share a:hover, .byline .share button:hover { color: var(--text-primary); border-color: var(--border-medium); }
 .byline .share button.copied { color: var(--success); border-color: var(--success); }
 
-.article-cover { max-width: 1040px; margin: 48px auto; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+.article-cover { max-width: 720px; margin: 48px auto; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-card); }
 .article-cover img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; filter: brightness(0.85) contrast(1.1) saturate(0.85); }
 
 .article-layout { display: grid; grid-template-columns: 1fr minmax(0, 720px) 1fr; gap: 40px; margin-top: 48px; }
