@@ -1,0 +1,13 @@
+{%- assign p = include.post -%}
+{%- assign words = p.content | number_of_words -%}
+        <a href="{{ p.url | relative_url }}" class="post-card glass reveal{{ include.class }}" data-cat="{{ p.category }}">
+          {%- if p.image %}
+          <div class="post-media"><img src="{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy" onerror="this.classList.add('img-dead')">{% if p.category %}<span class="post-cat">{{ p.category }}</span>{% endif %}</div>
+          {%- endif %}
+          <div class="post-body">
+            <div class="post-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ p.date | date: "%b %-d, %Y" }}</span><span><i class="fa-regular fa-clock" aria-hidden="true"></i>{{ words | divided_by: 200 | at_least: 1 }} min read</span></div>
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.excerpt | strip_html | strip | truncatewords: 28 }}</p>
+            <span class="read-more">Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>

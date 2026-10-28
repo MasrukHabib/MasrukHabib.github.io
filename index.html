@@ -1,3 +1,6 @@
+---
+# front matter lets Jekyll fill in the Latest Writing section
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +23,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css?v=66a2f48a" />
+  {%- if site.posts.size > 0 %}
+  <link rel="stylesheet" href="css/blog.css?v={{ site.time | date: '%s' }}" />
+  {%- endif %}
+  <link rel="alternate" type="application/atom+xml" title="Masruk Habib's blog" href="blog/feed.xml" />
 
   <script type="application/ld+json">
   {
@@ -66,6 +73,7 @@
         <li><a href="#publications" class="nav-link">Publications</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="blog/" class="nav-link">Blog</a></li>
         <li class="nav-cta-mobile"><a href="assets/Masruk-Habib-CV.pdf?v=024d4fe5" target="_blank" rel="noopener" class="btn btn-sm btn-ghost"><i class="fa-solid fa-download" aria-hidden="true"></i>&nbsp;CV</a></li>
       </ul>
       <a href="assets/Masruk-Habib-CV.pdf?v=024d4fe5" target="_blank" rel="noopener" class="btn btn-sm btn-outline nav-cv"><i class="fa-solid fa-download" aria-hidden="true"></i>&nbsp;Download CV</a>
@@ -521,6 +529,26 @@
     </div>
   </section>
 
+  {%- if site.posts.size > 0 %}
+  <!-- ================= BLOG ================= -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-kicker mono">// notes from the lab</span>
+        <h2 class="sec-title">Latest <span class="grad-text">Writing</span></h2>
+        <p class="sec-sub">Practical write-ups on LLMs, applied ML research and building a business, straight from the work.</p>
+      </div>
+
+      <div class="post-grid">
+        {%- for post in site.posts limit: 3 %}
+          {%- include post-card.html post=post %}
+        {%- endfor %}
+      </div>
+      <div class="blog-cta reveal"><a href="blog/" class="btn btn-outline"><i class="fa-solid fa-book-open" aria-hidden="true"></i>&nbsp;View all posts</a></div>
+    </div>
+  </section>
+  {%- endif %}
+
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="section">
     <div class="container">
@@ -659,6 +687,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="blog/">Blog</a></li>
       </ul>
       <p class="footer-copy">© <span id="year">2026</span> Masruk Habib · Designed &amp; engineered with care.</p>
     </div>
@@ -666,6 +695,6 @@
 
   <button id="to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
 
-  <script src="js/main.js?v=fe051352"></script>
+  <script src="js/main.js?v=1234488b"></script>
 </body>
 </html>

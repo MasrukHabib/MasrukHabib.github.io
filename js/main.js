@@ -51,7 +51,8 @@
 
   /* ---------- Active nav link highlighting ---------- */
   const sections = [...document.querySelectorAll("section[id]")];
-  const links = [...document.querySelectorAll(".nav-link")];
+  // only in-page links; the Blog link points to its own page
+  const links = [...document.querySelectorAll('.nav-link[href^="#"]')];
   const setActiveLink = () => {
     let currentId = "";
     for (const sec of sections) {

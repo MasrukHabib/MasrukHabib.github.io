@@ -1,0 +1,29 @@
+title: Masruk Habib
+description: Writing on LLMs, applied ML research and building a business, by Masruk Habib.
+url: https://masrukhabib.github.io
+author: Masruk Habib
+lang: en
+
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - "01 Masruk Habib cv.pdf"
+  - Profile.pdf
+  - "github profile.jpg"
+  - "jim cover.jpg"
