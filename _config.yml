@@ -1,7 +1,11 @@
 title: Masruk Habib
 description: Writing on LLMs, applied ML research and building a business, by Masruk Habib.
 url: https://masrukhabib.github.io
-author: Masruk Habib
+author:
+  name: Masruk Habib
+  twitter: masruk_habib
+twitter:
+  username: masruk_habib
 lang: en
 
 permalink: /blog/:title/
