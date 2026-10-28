@@ -25,7 +25,7 @@ layout: default
           <li><a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" aria-label="LinkedIn">{% include icon.html name="linkedin" %}</a></li>
           <li><a href="https://x.com/masruk_habib" target="_blank" rel="noopener" aria-label="X">{% include icon.html name="x-brand" %}</a></li>
           <li><a href="https://github.com/MasrukHabib" target="_blank" rel="noopener" aria-label="GitHub">{% include icon.html name="github" %}</a></li>
-          <li><a href="https://scholar.google.com/scholar?q=author%3A%22Masruk+Habib%22" target="_blank" rel="noopener" aria-label="Google Scholar">{% include icon.html name="graduation-cap" %}</a></li>
+          <li><a href="{{ site.scholar_url }}" target="_blank" rel="noopener" aria-label="Google Scholar">{% include icon.html name="graduation-cap" %}</a></li>
           <li><a href="https://public.tableau.com/app/profile/masruk.habib" target="_blank" rel="noopener" aria-label="Tableau Public">{% include icon.html name="chart-column" %}</a></li>
           <li><a href="mailto:masrukjim@gmail.com" aria-label="Email">{% include icon.html name="mail" %}</a></li>
         </ul>
@@ -488,6 +488,16 @@ layout: default
             </div>
           </li>
         </ol>
+
+        <aside class="scholar-cta card reveal" aria-labelledby="scholar-title">
+          <span class="icon-box icon-box-lg">{% include icon.html name="graduation-cap" size=24 %}</span>
+          <div class="scholar-copy">
+            <span class="section-label">[Stay updated]</span>
+            <h3 id="scholar-title">Follow my research on Google Scholar</h3>
+            <p>New papers, citations and ongoing work show up there first. Follow along to get updates on my latest research.</p>
+          </div>
+          <a href="{{ site.scholar_url }}" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="graduation-cap" size=16 %}Visit Google Scholar{% include icon.html name="arrow-up-right" size=14 %}</a>
+        </aside>
 
         <article class="award card featured reveal">
           <span class="icon-box icon-box-lg">{% include icon.html name="trophy" size=24 %}</span>

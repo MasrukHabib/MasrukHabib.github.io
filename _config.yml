@@ -8,6 +8,10 @@ twitter:
   username: masruk_habib
 lang: en
 
+# Google Scholar link used in the hero, Research section and footer.
+# Swap in the profile URL (https://scholar.google.com/citations?user=...) when ready.
+scholar_url: "https://scholar.google.com/scholar?q=author%3A%22Masruk+Habib%22"
+
 permalink: /blog/:title/
 plugins:
   - jekyll-feed

@@ -439,6 +439,11 @@ a.card:hover, .proj-card:hover, .exp-card:hover, .pub:hover, .skill-card:hover, 
 .pub-year-tag { font-family: var(--font-mono); font-size: 12px; font-weight: 400; letter-spacing: 0.06em; color: var(--accent); }
 .pub-main .arch-meta { margin: 8px 0 0; }
 .pub-main { min-width: 0; }
+.scholar-cta { display: flex; align-items: center; gap: 28px; margin-top: 24px; padding: 32px 40px; }
+.scholar-copy { flex: 1; min-width: 0; }
+.scholar-copy .section-label { margin-bottom: 8px; }
+.scholar-copy h3 { font-size: var(--text-h3); font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; color: var(--text-primary); }
+.scholar-copy p { margin-top: 6px; max-width: 560px; font-size: 15px; }
 .award { display: flex; gap: 28px; align-items: flex-start; margin-top: 48px; padding: 36px 40px; }
 .award .section-label { margin-bottom: 8px; }
 .award h3 { font-size: clamp(20px, 2.2vw, 26px); }
@@ -606,6 +611,8 @@ a.contact-card:hover strong { color: var(--accent-bright); }
   .pub .btn { justify-self: start; }
   .pub-year:not(.pub-year-tag) { font-size: 22px; }
   .award { flex-direction: column; padding: 28px 20px; }
+  .scholar-cta { flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px 20px; }
+  .scholar-cta .btn { width: 100%; }
   .proj-body, .post-body { padding: 20px; }
   .footer-wrap { padding: 0 12px 12px; }
   .footer-panel { padding: 40px 20px 20px; }
