@@ -7,6 +7,7 @@ author:
 twitter:
   username: masruk_habib
 lang: en
+timezone: Asia/Dhaka  # post dates are Dhaka time, so a post dated today publishes today
 
 # Google Scholar link used in the hero, Research section and footer.
 # Swap in the profile URL (https://scholar.google.com/citations?user=...) when ready.
