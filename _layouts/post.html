@@ -7,7 +7,7 @@ layout: default
       <div class="hero-orb" aria-hidden="true"></div>
       <div class="container">
         <header class="article-head">
-          <a href="{{ '/blog/' | relative_url }}" class="back-link">{% include icon.html name="arrow-left" size=16 %}All posts</a>
+          <a href="{{ '/blog/' | relative_url }}" class="back-link">{% include icon.html name="arrow-left" px=16 %}All posts</a>
           <p class="arch-meta">{% if page.category %}{{ page.category | upcase }} // {% endif %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" | upcase }}</time> // {{ words | divided_by: 200 | at_least: 1 }} MIN READ</p>
           <h1 class="article-title">{{ page.title }}</h1>
           {%- if page.excerpt %}
@@ -17,9 +17,9 @@ layout: default
             <img src="{{ '/assets/profile.webp' | relative_url }}" alt="" width="44" height="44">
             <div><strong>Masruk Habib</strong><small>AI Engineer · R&amp;D at GoScurry.ai</small></div>
             <div class="share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">{% include icon.html name="linkedin" size=16 %}</a>
-              <a href="https://twitter.com/intent/tweet?url={{ share_url }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X">{% include icon.html name="x-brand" size=16 %}</a>
-              <button type="button" class="copy-link" aria-label="Copy link">{% include icon.html name="link" size=16 %}</button>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">{% include icon.html name="linkedin" px=16 %}</a>
+              <a href="https://twitter.com/intent/tweet?url={{ share_url }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X">{% include icon.html name="x-brand" px=16 %}</a>
+              <button type="button" class="copy-link" aria-label="Copy link">{% include icon.html name="link" px=16 %}</button>
             </div>
           </div>
         </header>

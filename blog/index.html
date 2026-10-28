@@ -28,7 +28,7 @@ description: Deep dives on LLMs and RAG, plain-language research explainers, and
             {%- if featured.tags.size > 0 %}
             <ul class="tag-list">{% for t in featured.tags %}<li>{{ t }}</li>{% endfor %}</ul>
             {%- endif %}
-            <span class="text-link">Read article{% include icon.html name="arrow-right" size=14 %}</span>
+            <span class="text-link">Read article{% include icon.html name="arrow-right" px=14 %}</span>
           </div>
         </a>
 
@@ -41,7 +41,7 @@ description: Deep dives on LLMs and RAG, plain-language research explainers, and
             <button data-f="{{ c }}">{{ c }}</button>
             {%- endfor %}
           </div>
-          <label class="blog-search">{% include icon.html name="search" size=16 %}<input id="post-search" type="search" placeholder="Search posts..." aria-label="Search posts" /></label>
+          <label class="blog-search">{% include icon.html name="search" px=16 %}<input id="post-search" type="search" placeholder="Search posts..." aria-label="Search posts" /></label>
         </div>
 
         <div class="post-grid" id="post-grid">
@@ -57,7 +57,7 @@ description: Deep dives on LLMs and RAG, plain-language research explainers, and
         {%- endif %}
       {%- else %}
         <div class="blog-empty card reveal">
-          <span class="icon-box">{% include icon.html name="pen-line" size=20 %}</span>
+          <span class="icon-box">{% include icon.html name="pen-line" px=20 %}</span>
           <h2>First posts are on the way</h2>
           <p>Write-ups on LLMs, applied ML research and building Sohoj Dokan are coming soon. Follow on LinkedIn to catch the first one.</p>
         </div>
@@ -69,7 +69,7 @@ description: Deep dives on LLMs and RAG, plain-language research explainers, and
             <h3>Get new posts</h3>
             <p>Follow on LinkedIn, where every new post is shared.</p>
           </div>
-          <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="linkedin" size=16 %}Follow on LinkedIn</a>
+          <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="linkedin" px=16 %}Follow on LinkedIn</a>
         </div>
       </div>
     </section>

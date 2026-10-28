@@ -8,7 +8,7 @@ The site follows the Dark Luxury system described in `DESIGN.md` (tokens, typogr
 The matching Claude Code skill lives in `.claude/skills/dark-luxury-design/`.
 
 - Styles: `css/style.css` (whole site) and `css/blog.css` (blog listing and articles)
-- Icons: inline SVG from Lucide. Use `{% include icon.html name="brain" %}`; add new icons to `_data/icons.yml`
+- Icons: inline SVG from Lucide. Use `{% include icon.html name="brain" %}` (optional `px=16`, default 18; don't name it `size`, which Liquid reads as the parameter count); add new icons to `_data/icons.yml`
 - Layout: `_layouts/default.html` with `_includes/nav.html` and `_includes/footer.html`
 
 ## Writing a blog post

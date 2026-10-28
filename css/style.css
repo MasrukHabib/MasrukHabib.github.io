@@ -261,12 +261,13 @@ a.card:hover, .proj-card:hover, .exp-card:hover, .pub:hover, .skill-card:hover, 
 .hero-lead { margin-top: 28px; max-width: 620px; font-size: 18px; }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 40px; }
 .hero-meta { margin-top: 40px; font-size: 11px; letter-spacing: 0.06em; color: var(--text-tertiary); }
-.hero-socials { display: flex; gap: 4px; margin-top: 16px; }
+.hero-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
 .hero-socials a {
-  width: 40px; height: 40px; display: grid; place-items: center; border-radius: var(--r-md);
-  color: var(--text-body); transition: color var(--dur-base) ease, background-color var(--dur-base) ease;
+  width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--r-md);
+  color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border-medium);
+  transition: color var(--dur-base) ease, border-color var(--dur-base) ease, box-shadow var(--dur-base) ease, transform var(--dur-fast) var(--ease-out);
 }
-.hero-socials a:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.04); }
+.hero-socials a:hover { color: var(--accent-bright); border-color: var(--border-accent); box-shadow: 0 0 16px rgba(212, 160, 60, 0.18); transform: translateY(-1px); }
 
 /* ============================================================
    MARQUEES (logo strip + certifications)

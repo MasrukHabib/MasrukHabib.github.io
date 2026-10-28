@@ -8,6 +8,6 @@
             <p class="arch-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %-d, %Y" | upcase }}</time> // {{ words | divided_by: 200 | at_least: 1 }} MIN READ</p>
             <h3>{{ p.title }}</h3>
             <p>{{ p.excerpt | strip_html | strip | truncatewords: 28 }}</p>
-            <span class="text-link">Read article{% include icon.html name="arrow-right" size=14 %}</span>
+            <span class="text-link">Read article{% include icon.html name="arrow-right" px=14 %}</span>
           </div>
         </a>

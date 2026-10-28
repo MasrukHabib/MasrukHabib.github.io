@@ -9,12 +9,12 @@
         <li><a href="{{ home }}#research">Research</a></li>
         <li><a href="{{ '/blog/' | relative_url }}"{% if page.blog %} aria-current="page"{% endif %}>Writing</a></li>
         <li><a href="{{ home }}#contact">Contact</a></li>
-        <li class="nav-cv-mobile"><a href="{{ '/assets/Masruk-Habib-CV.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="download" size=16 %}Download CV</a></li>
+        <li class="nav-cv-mobile"><a href="{{ '/assets/Masruk-Habib-CV.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="download" px=16 %}Download CV</a></li>
       </ul>
-      <a href="{{ '/assets/Masruk-Habib-CV.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cv">{% include icon.html name="download" size=16 %}Download CV</a>
+      <a href="{{ '/assets/Masruk-Habib-CV.pdf' | relative_url }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cv">{% include icon.html name="download" px=16 %}Download CV</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <span class="nav-toggle-open">{% include icon.html name="menu" size=22 %}</span>
-        <span class="nav-toggle-close">{% include icon.html name="x" size=22 %}</span>
+        <span class="nav-toggle-open">{% include icon.html name="menu" px=22 %}</span>
+        <span class="nav-toggle-close">{% include icon.html name="x" px=22 %}</span>
       </button>
     </nav>
   </header>
