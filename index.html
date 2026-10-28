@@ -511,29 +511,9 @@ layout: default
       </div>
     </section>
 
-    {%- if site.posts.size > 0 %}
-    <!-- ================= WRITING ================= -->
-    <section id="writing" class="section section-alt">
-      <div class="container">
-        <div class="section-head section-head-row reveal">
-          <div>
-            <span class="section-label">[Writing]</span>
-            <h2 class="section-title"><span class="hl-muted">Notes from</span> <span class="hl-bright">the lab.</span></h2>
-            <p class="section-sub">Practical write-ups on LLMs, applied ML research and building a business.</p>
-          </div>
-          <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">All posts{% include icon.html name="arrow-right" px=16 %}</a>
-        </div>
-        <div class="post-grid">
-          {%- for post in site.posts limit: 3 %}
-            {%- include post-card.html post=post %}
-          {%- endfor %}
-        </div>
-      </div>
-    </section>
-    {%- endif %}
 
     <!-- ================= SKILLS ================= -->
-    <section id="skills" class="section">
+    <section id="skills" class="section section-alt">
       <div class="container">
         <div class="section-head section-head-center reveal">
           <span class="section-label">[Toolbox]</span>
@@ -598,6 +578,27 @@ layout: default
         </div>
       </div>
     </section>
+
+    {%- if site.posts.size > 0 %}
+    <!-- ================= WRITING ================= -->
+    <section id="writing" class="section">
+      <div class="container">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <span class="section-label">[Writing]</span>
+            <h2 class="section-title"><span class="hl-muted">Notes from</span> <span class="hl-bright">the lab.</span></h2>
+            <p class="section-sub">Practical write-ups on LLMs, applied ML research and building a business.</p>
+          </div>
+          <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">All posts{% include icon.html name="arrow-right" px=16 %}</a>
+        </div>
+        <div class="post-grid">
+          {%- for post in site.posts limit: 3 %}
+            {%- include post-card.html post=post %}
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+    {%- endif %}
 
     <!-- ================= CONTACT ================= -->
     <section id="contact" class="section contact">
