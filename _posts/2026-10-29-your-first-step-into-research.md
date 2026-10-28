@@ -3,8 +3,8 @@ title: "Your First Step into Research: You Don't Need to Know Everything to Begi
 category: Research
 tags: [Research, Beginners, Academic Writing, Roadmap]
 excerpt: "Research isn't about having all the answers. It's about having the curiosity to ask better questions."
-image: https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop
-image_alt: "Laboratory glassware and a pipette on a white bench"
+image: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop
+image_alt: "Glowing circuit board traces on a dark background"
 ---
 
 ## Introduction: Every Great Discovery Begins with a Question
