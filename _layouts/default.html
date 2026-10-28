@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0907" />
+  <script>document.documentElement.classList.add("js")</script>
+  {%- if page.url == "/" %}
+  {%- include head-home.html %}
+  {%- else %}
+  {% seo %}
+  {%- endif %}
+  {% feed_meta %}
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0907'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23d4a03c' stroke-opacity='.55' stroke-width='2'/%3E%3Ctext x='29' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='800' text-anchor='middle' fill='%23f0ebe0'%3EM%3C/text%3E%3Ccircle cx='47' cy='40' r='4' fill='%23d4a03c'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
+  {%- if page.blog %}
+  <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
+  {%- endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include nav.html %}
+
+  <main id="main">
+{{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  {%- if page.blog %}
+  <script src="{{ '/js/blog.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  {%- endif %}
+</body>
+</html>

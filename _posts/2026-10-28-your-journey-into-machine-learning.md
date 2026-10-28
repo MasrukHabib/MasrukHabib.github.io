@@ -41,12 +41,12 @@ In simple terms:
 You'll find ML in many everyday applications:
 
 <div class="icon-grid">
-  <div class="icon-card"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><strong>Healthcare</strong><span>Helping researchers identify patterns associated with diseases.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><strong>Finance</strong><span>Detecting suspicious transactions and estimating financial risks.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><strong>E-commerce</strong><span>Recommending products based on customer behavior.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><strong>Transportation</strong><span>Predicting demand and optimizing routes.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-film" aria-hidden="true"></i><strong>Entertainment</strong><span>Recommending music, movies, and videos.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-seedling" aria-hidden="true"></i><strong>Agriculture</strong><span>Identifying plant diseases and estimating crop yields.</span></div>
+  <div class="icon-card">{% include icon.html name="heart-pulse" %}<strong>Healthcare</strong><span>Helping researchers identify patterns associated with diseases.</span></div>
+  <div class="icon-card">{% include icon.html name="shield-half" %}<strong>Finance</strong><span>Detecting suspicious transactions and estimating financial risks.</span></div>
+  <div class="icon-card">{% include icon.html name="shopping-cart" %}<strong>E-commerce</strong><span>Recommending products based on customer behavior.</span></div>
+  <div class="icon-card">{% include icon.html name="truck" %}<strong>Transportation</strong><span>Predicting demand and optimizing routes.</span></div>
+  <div class="icon-card">{% include icon.html name="film" %}<strong>Entertainment</strong><span>Recommending music, movies, and videos.</span></div>
+  <div class="icon-card">{% include icon.html name="sprout" %}<strong>Agriculture</strong><span>Identifying plant diseases and estimating crop yields.</span></div>
 </div>
 
 You don't need to master all these applications today. Just remember that Machine Learning is not merely about algorithms. It's about using data to solve meaningful problems.
@@ -67,10 +67,10 @@ But here's an important truth: **You can start learning Machine Learning before 
 Begin with the fundamentals that help you understand what your models are doing.
 
 <div class="icon-grid icon-grid-2">
-  <div class="icon-card"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i><strong>Basic statistics</strong><span>Mean, median, variance, distributions, and correlation.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-dice" aria-hidden="true"></i><strong>Probability</strong><span>Understanding uncertainty and likelihood.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-table-cells" aria-hidden="true"></i><strong>Linear algebra</strong><span>Vectors, matrices, and basic operations.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><strong>Calculus</strong><span>Gradients and the intuition behind optimization.</span></div>
+  <div class="icon-card">{% include icon.html name="chart-no-axes-column" %}<strong>Basic statistics</strong><span>Mean, median, variance, distributions, and correlation.</span></div>
+  <div class="icon-card">{% include icon.html name="dice-5" %}<strong>Probability</strong><span>Understanding uncertainty and likelihood.</span></div>
+  <div class="icon-card">{% include icon.html name="grid-3x3" %}<strong>Linear algebra</strong><span>Vectors, matrices, and basic operations.</span></div>
+  <div class="icon-card">{% include icon.html name="chart-line" %}<strong>Calculus</strong><span>Gradients and the intuition behind optimization.</span></div>
 </div>
 
 Learn these concepts gradually, alongside practical examples. For instance, when learning linear regression, explore how a model draws a line through data points to estimate a value.
@@ -101,10 +101,10 @@ If you're new to programming, focus on these essentials:
 Once you are comfortable with the basics, explore these tools:
 
 <div class="icon-grid icon-grid-2">
-  <div class="icon-card"><i class="fa-solid fa-calculator" aria-hidden="true"></i><strong>NumPy</strong><span>Numerical computations and arrays.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-table" aria-hidden="true"></i><strong>Pandas</strong><span>Loading, cleaning, and analyzing datasets.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-chart-area" aria-hidden="true"></i><strong>Matplotlib</strong><span>Visualizing data and patterns.</span></div>
-  <div class="icon-card"><i class="fa-solid fa-gears" aria-hidden="true"></i><strong>Scikit-learn</strong><span>Building and evaluating traditional Machine Learning models.</span></div>
+  <div class="icon-card">{% include icon.html name="calculator" %}<strong>NumPy</strong><span>Numerical computations and arrays.</span></div>
+  <div class="icon-card">{% include icon.html name="table" %}<strong>Pandas</strong><span>Loading, cleaning, and analyzing datasets.</span></div>
+  <div class="icon-card">{% include icon.html name="chart-area" %}<strong>Matplotlib</strong><span>Visualizing data and patterns.</span></div>
+  <div class="icon-card">{% include icon.html name="settings" %}<strong>Scikit-learn</strong><span>Building and evaluating traditional Machine Learning models.</span></div>
 </div>
 
 Here's how little code it takes to see these tools working together:
@@ -168,7 +168,7 @@ Start with the fundamentals.
 
 <div class="algo-split">
   <div class="algo-col">
-    <h3><i class="fa-solid fa-tags" aria-hidden="true"></i> Supervised Learning</h3>
+    <h3>{% include icon.html name="tags" %} Supervised Learning</h3>
     <p>The model learns from examples that contain known answers.</p>
     <dl>
       <dt>Linear Regression</dt><dd>Predicting numerical values, such as house prices.</dd>
@@ -179,7 +179,7 @@ Start with the fundamentals.
     </dl>
   </div>
   <div class="algo-col">
-    <h3><i class="fa-solid fa-circle-nodes" aria-hidden="true"></i> Unsupervised Learning</h3>
+    <h3>{% include icon.html name="network" %} Unsupervised Learning</h3>
     <p>The model explores patterns in data without relying on labeled answers for the learning task.</p>
     <dl>
       <dt>K-Means Clustering</dt><dd>Grouping similar customers or data points.</dd>
@@ -205,11 +205,11 @@ Watching tutorials can make you feel productive, but understanding grows when yo
 Here are five beginner-friendly project ideas:
 
 <div class="project-list">
-  <div class="project-item"><span class="project-num">01</span><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><div><strong>Student Performance Prediction</strong><p>Use study hours, attendance, or other appropriate features to predict academic performance.</p></div></div>
-  <div class="project-item"><span class="project-num">02</span><i class="fa-solid fa-house" aria-hidden="true"></i><div><strong>House Price Prediction</strong><p>Build a regression model using a publicly available housing dataset.</p></div></div>
-  <div class="project-item"><span class="project-num">03</span><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i><div><strong>Spam Message Classification</strong><p>Train a basic text classification model to distinguish spam from legitimate messages.</p></div></div>
-  <div class="project-item"><span class="project-num">04</span><i class="fa-solid fa-users" aria-hidden="true"></i><div><strong>Customer Segmentation</strong><p>Use clustering to identify groups of customers with similar characteristics.</p></div></div>
-  <div class="project-item"><span class="project-num">05</span><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><div><strong>Heart Disease Risk Classification</strong><p>Explore a public educational dataset to build a classification model. Clearly communicate its limitations; it is not a clinically validated diagnostic tool.</p></div></div>
+  <div class="project-item"><span class="project-num">01</span>{% include icon.html name="graduation-cap" %}<div><strong>Student Performance Prediction</strong><p>Use study hours, attendance, or other appropriate features to predict academic performance.</p></div></div>
+  <div class="project-item"><span class="project-num">02</span>{% include icon.html name="house" %}<div><strong>House Price Prediction</strong><p>Build a regression model using a publicly available housing dataset.</p></div></div>
+  <div class="project-item"><span class="project-num">03</span>{% include icon.html name="mail-open" %}<div><strong>Spam Message Classification</strong><p>Train a basic text classification model to distinguish spam from legitimate messages.</p></div></div>
+  <div class="project-item"><span class="project-num">04</span>{% include icon.html name="users" %}<div><strong>Customer Segmentation</strong><p>Use clustering to identify groups of customers with similar characteristics.</p></div></div>
+  <div class="project-item"><span class="project-num">05</span>{% include icon.html name="heart-pulse" %}<div><strong>Heart Disease Risk Classification</strong><p>Explore a public educational dataset to build a classification model. Clearly communicate its limitations; it is not a clinically validated diagnostic tool.</p></div></div>
 </div>
 
 For every project, try to follow this workflow:
@@ -238,20 +238,20 @@ Instead, follow a simple progression.
 
 <figure class="roadmap">
   <ol>
-    <li style="--rc: #22d3ee">
-      <span class="rm-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+    <li>
+      <span class="rm-icon">{% include icon.html name="code" %}</span>
       <div><span class="rm-weeks">Weeks 1–2</span><strong>Stage 1: Python Fundamentals</strong><p>Learn programming basics and practice with small exercises.</p></div>
     </li>
-    <li style="--rc: #34d399">
-      <span class="rm-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></span>
+    <li>
+      <span class="rm-icon">{% include icon.html name="chart-column" %}</span>
       <div><span class="rm-weeks">Weeks 3–4</span><strong>Stage 2: Data Analysis and Statistics</strong><p>Practice with NumPy, Pandas, visualizations, and basic statistics.</p></div>
     </li>
-    <li style="--rc: #fbbf24">
-      <span class="rm-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+    <li>
+      <span class="rm-icon">{% include icon.html name="brain" %}</span>
       <div><span class="rm-weeks">Weeks 5–8</span><strong>Stage 3: Core Machine Learning</strong><p>Learn regression, classification, clustering, and model evaluation.</p></div>
     </li>
-    <li style="--rc: #e879f9">
-      <span class="rm-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>
+    <li>
+      <span class="rm-icon">{% include icon.html name="rocket" %}</span>
       <div><span class="rm-weeks">Weeks 9–12</span><strong>Stage 4: Projects and Deployment</strong><p>Complete two or three projects, document your results, and try deploying one.</p></div>
     </li>
   </ol>
@@ -269,11 +269,11 @@ You don't need an expensive course to begin.
 Here are some useful resources:
 
 <div class="resource-grid">
-  <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noopener"><i class="fa-brands fa-google" aria-hidden="true"></i><span><strong>Google's Machine Learning Crash Course</strong><small>developers.google.com</small></span><i class="fa-solid fa-arrow-up-right-from-square ext" aria-hidden="true"></i></a>
-  <a class="resource-card" href="https://www.kaggle.com/learn" target="_blank" rel="noopener"><i class="fa-brands fa-kaggle" aria-hidden="true"></i><span><strong>Kaggle Learn</strong><small>kaggle.com/learn</small></span><i class="fa-solid fa-arrow-up-right-from-square ext" aria-hidden="true"></i></a>
-  <a class="resource-card" href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener"><i class="fa-solid fa-book" aria-hidden="true"></i><span><strong>Scikit-learn User Guide</strong><small>scikit-learn.org</small></span><i class="fa-solid fa-arrow-up-right-from-square ext" aria-hidden="true"></i></a>
-  <a class="resource-card" href="https://statquest.org" target="_blank" rel="noopener"><i class="fa-brands fa-youtube" aria-hidden="true"></i><span><strong>StatQuest</strong><small>statquest.org</small></span><i class="fa-solid fa-arrow-up-right-from-square ext" aria-hidden="true"></i></a>
-  <a class="resource-card" href="https://www.3blue1brown.com" target="_blank" rel="noopener"><i class="fa-solid fa-square-root-variable" aria-hidden="true"></i><span><strong>3Blue1Brown</strong><small>3blue1brown.com</small></span><i class="fa-solid fa-arrow-up-right-from-square ext" aria-hidden="true"></i></a>
+  <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noopener">{% include icon.html name="globe" %}<span><strong>Google's Machine Learning Crash Course</strong><small>developers.google.com</small></span>{% include icon.html name="arrow-up-right" class="ext" %}</a>
+  <a class="resource-card" href="https://www.kaggle.com/learn" target="_blank" rel="noopener">{% include icon.html name="trophy" %}<span><strong>Kaggle Learn</strong><small>kaggle.com/learn</small></span>{% include icon.html name="arrow-up-right" class="ext" %}</a>
+  <a class="resource-card" href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener">{% include icon.html name="book" %}<span><strong>Scikit-learn User Guide</strong><small>scikit-learn.org</small></span>{% include icon.html name="arrow-up-right" class="ext" %}</a>
+  <a class="resource-card" href="https://statquest.org" target="_blank" rel="noopener">{% include icon.html name="youtube" %}<span><strong>StatQuest</strong><small>statquest.org</small></span>{% include icon.html name="arrow-up-right" class="ext" %}</a>
+  <a class="resource-card" href="https://www.3blue1brown.com" target="_blank" rel="noopener">{% include icon.html name="sigma" %}<span><strong>3Blue1Brown</strong><small>3blue1brown.com</small></span>{% include icon.html name="arrow-up-right" class="ext" %}</a>
 </div>
 
 Use one primary learning resource at a time. Supplement it when a topic is confusing, and practice what you learn instead of collecting endless bookmarks.

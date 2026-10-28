@@ -1,11 +1,9 @@
-# Source documents (a copy of the CV already lives in assets/)
-01 Masruk Habib cv.pdf
-Profile.pdf
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
 
 # OS junk
 Thumbs.db
 Desktop.ini
-
-# Source images (optimised copies live in assets/)
-github profile.jpg
-jim cover.jpg
+.DS_Store

@@ -1,59 +1,56 @@
 ---
-layout: blog
+layout: default
 ---
 {%- assign words = content | number_of_words -%}
 {%- assign share_url = page.url | absolute_url | url_encode -%}
-  <main class="article-wrap">
-    <div class="container">
-      <header class="article-head">
-        <a href="{{ '/blog/' | relative_url }}" class="back-link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All posts</a>
-        <div class="post-meta">
-          {%- if page.category %}<span><i class="fa-solid fa-tag" aria-hidden="true"></i>{{ page.category }}</span>{% endif %}
-          <span><i class="fa-regular fa-calendar" aria-hidden="true"></i><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time></span>
-          <span><i class="fa-regular fa-clock" aria-hidden="true"></i>{{ words | divided_by: 200 | at_least: 1 }} min read</span>
-        </div>
-        <h1 class="article-title">{{ page.title }}</h1>
-        {%- if page.excerpt %}
-        <p class="article-lede">{{ page.excerpt | strip_html | strip }}</p>
-        {%- endif %}
-        <div class="byline">
-          <img src="{{ '/assets/profile.webp' | relative_url }}" alt="Masruk Habib" width="46" height="46">
-          <div><strong>Masruk Habib</strong><small>AI Engineer · R&amp;D at GoScurry.ai</small></div>
-          <div class="share">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/intent/tweet?url={{ share_url }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-            <button type="button" class="copy-link" aria-label="Copy link"><i class="fa-solid fa-link" aria-hidden="true"></i></button>
-          </div>
-        </div>
-      </header>
-
-      {%- if page.image %}
-      <figure class="article-cover"><img src="{{ page.image }}" alt="{{ page.image_alt }}" onerror="this.parentNode.remove()"></figure>
-      {%- endif %}
-
-      <div class="article-layout">
-        <article class="prose">
-{{ content }}
-        </article>
-        <aside class="toc glass" id="toc" hidden>
-          <h4>On this page</h4>
-        </aside>
-      </div>
-
-      <footer class="article-foot">
-        {%- if page.tags.size > 0 %}
-        <div class="tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</div>
-        {%- endif %}
-        {%- if page.previous or page.next %}
-        <nav class="post-nav" aria-label="More posts">
-          {%- if page.previous %}
-          <a href="{{ page.previous.url | relative_url }}" class="glass"><small>← Previous</small><strong>{{ page.previous.title }}</strong></a>
-          {%- else %}<span></span>{% endif %}
-          {%- if page.next %}
-          <a href="{{ page.next.url | relative_url }}" class="glass post-nav-next"><small>Next →</small><strong>{{ page.next.title }}</strong></a>
+    <article class="article-wrap">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="container">
+        <header class="article-head">
+          <a href="{{ '/blog/' | relative_url }}" class="back-link">{% include icon.html name="arrow-left" size=16 %}All posts</a>
+          <p class="arch-meta">{% if page.category %}{{ page.category | upcase }} // {% endif %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" | upcase }}</time> // {{ words | divided_by: 200 | at_least: 1 }} MIN READ</p>
+          <h1 class="article-title">{{ page.title }}</h1>
+          {%- if page.excerpt %}
+          <p class="article-lede">{{ page.excerpt | strip_html | strip }}</p>
           {%- endif %}
-        </nav>
+          <div class="byline">
+            <img src="{{ '/assets/profile.webp' | relative_url }}" alt="" width="44" height="44">
+            <div><strong>Masruk Habib</strong><small>AI Engineer · R&amp;D at GoScurry.ai</small></div>
+            <div class="share">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">{% include icon.html name="linkedin" size=16 %}</a>
+              <a href="https://twitter.com/intent/tweet?url={{ share_url }}&amp;text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X">{% include icon.html name="x-brand" size=16 %}</a>
+              <button type="button" class="copy-link" aria-label="Copy link">{% include icon.html name="link" size=16 %}</button>
+            </div>
+          </div>
+        </header>
+
+        {%- if page.image %}
+        <figure class="article-cover"><img src="{{ page.image }}" alt="{{ page.image_alt }}" onerror="this.parentNode.remove()"></figure>
         {%- endif %}
-      </footer>
-    </div>
-  </main>
+
+        <div class="article-layout">
+          <div class="prose">
+{{ content }}
+          </div>
+          <aside class="toc" id="toc" hidden>
+            <h2>[On this page]</h2>
+          </aside>
+        </div>
+
+        <footer class="article-foot">
+          {%- if page.tags.size > 0 %}
+          <ul class="tag-list">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          {%- endif %}
+          {%- if page.previous or page.next %}
+          <nav class="post-nav" aria-label="More posts">
+            {%- if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}" class="card"><small>PREVIOUS</small><strong>{{ page.previous.title }}</strong></a>
+            {%- else %}<span></span>{% endif %}
+            {%- if page.next %}
+            <a href="{{ page.next.url | relative_url }}" class="card post-nav-next"><small>NEXT</small><strong>{{ page.next.title }}</strong></a>
+            {%- endif %}
+          </nav>
+          {%- endif %}
+        </footer>
+      </div>
+    </article>

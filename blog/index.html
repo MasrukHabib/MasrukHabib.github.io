@@ -1,77 +1,75 @@
 ---
-layout: blog
+layout: default
 title: Blog
 description: Deep dives on LLMs and RAG, plain-language research explainers, and lessons from co-founding Sohoj Dokan.
 ---
-  <section class="blog-hero">
-    <div class="container">
-      <div class="sec-head reveal">
-        <span class="sec-kicker mono">// the blog</span>
-        <h1 class="sec-title">Writing &amp; <span class="grad-text">Notes</span></h1>
-        <p class="sec-sub">{{ page.description }}</p>
+    <section class="blog-hero">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section-label reveal">[Writing]</span>
+        <h1 class="display-headline blog-title reveal"><span class="hl-muted">Notes from</span> <span class="hl-bright">the lab.</span></h1>
+        <p class="section-sub reveal">{{ page.description }}</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="blog-list">
-    <div class="container">
-    {%- if site.posts.size > 0 %}
-      {%- assign featured = site.posts.first %}
-      {%- assign words = featured.content | number_of_words %}
-      <a href="{{ featured.url | relative_url }}" class="post-featured glass reveal" id="featured">
-        {%- if featured.image %}
-        <div class="post-media"><img src="{{ featured.image }}" alt="{{ featured.image_alt }}" onerror="this.classList.add('img-dead')"><span class="post-cat">Latest{% if featured.category %} · {{ featured.category }}{% endif %}</span></div>
-        {%- endif %}
-        <div class="post-body">
-          <div class="post-meta"><span><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ featured.date | date: "%b %-d, %Y" }}</span><span><i class="fa-regular fa-clock" aria-hidden="true"></i>{{ words | divided_by: 200 | at_least: 1 }} min read</span></div>
-          <h2>{{ featured.title }}</h2>
-          <p>{{ featured.excerpt | strip_html | strip | truncatewords: 45 }}</p>
-          {%- if featured.tags.size > 0 %}
-          <div class="tags">{% for t in featured.tags %}<span>{{ t }}</span>{% endfor %}</div>
+    <section class="blog-list">
+      <div class="container">
+      {%- if site.posts.size > 0 %}
+        {%- assign featured = site.posts.first %}
+        {%- assign words = featured.content | number_of_words %}
+        <a href="{{ featured.url | relative_url }}" class="post-featured card featured reveal" id="featured">
+          {%- if featured.image %}
+          <div class="post-media"><img src="{{ featured.image }}" alt="{{ featured.image_alt }}" onerror="this.parentNode.classList.add('img-dead')"><span class="proj-flag">Latest{% if featured.category %} // {{ featured.category }}{% endif %}</span></div>
           {%- endif %}
-          <span class="read-more">Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-        </div>
-      </a>
+          <div class="post-body">
+            <p class="arch-meta"><time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%b %-d, %Y" | upcase }}</time> // {{ words | divided_by: 200 | at_least: 1 }} MIN READ</p>
+            <h2>{{ featured.title }}</h2>
+            <p>{{ featured.excerpt | strip_html | strip | truncatewords: 45 }}</p>
+            {%- if featured.tags.size > 0 %}
+            <ul class="tag-list">{% for t in featured.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+            {%- endif %}
+            <span class="text-link">Read article{% include icon.html name="arrow-right" size=14 %}</span>
+          </div>
+        </a>
 
-      {%- if site.posts.size > 1 %}
-      <div class="blog-tools">
-        <div class="filter-chips" id="filters" role="group" aria-label="Filter posts by category">
-          <button class="active" data-f="all">All</button>
-          {%- assign cats = site.posts | map: "category" | compact | uniq | sort %}
-          {%- for c in cats %}
-          <button data-f="{{ c }}">{{ c }}</button>
+        {%- if site.posts.size > 1 %}
+        <div class="blog-tools">
+          <div class="filter-chips" id="filters" role="group" aria-label="Filter posts by category">
+            <button class="active" data-f="all">All</button>
+            {%- assign cats = site.posts | map: "category" | compact | uniq | sort %}
+            {%- for c in cats %}
+            <button data-f="{{ c }}">{{ c }}</button>
+            {%- endfor %}
+          </div>
+          <label class="blog-search">{% include icon.html name="search" size=16 %}<input id="post-search" type="search" placeholder="Search posts..." aria-label="Search posts" /></label>
+        </div>
+
+        <div class="post-grid" id="post-grid">
+          {%- for post in site.posts %}
+            {%- if forloop.first %}
+              {%- include post-card.html post=post class=" is-featured" %}
+            {%- else %}
+              {%- include post-card.html post=post %}
+            {%- endif %}
           {%- endfor %}
         </div>
-        <label class="blog-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="post-search" type="search" placeholder="Search posts..." aria-label="Search posts" /></label>
-      </div>
-
-      <div class="post-grid" id="post-grid">
-        {%- for post in site.posts %}
-          {%- if forloop.first %}
-            {%- include post-card.html post=post class=" is-featured" %}
-          {%- else %}
-            {%- include post-card.html post=post %}
-          {%- endif %}
-        {%- endfor %}
-      </div>
-      <p class="blog-empty-filter" id="no-match" hidden>No posts match that search yet.</p>
+        <p class="blog-empty-filter" id="no-match" hidden>No posts match that search yet.</p>
+        {%- endif %}
+      {%- else %}
+        <div class="blog-empty card reveal">
+          <span class="icon-box">{% include icon.html name="pen-line" size=20 %}</span>
+          <h2>First posts are on the way</h2>
+          <p>Write-ups on LLMs, applied ML research and building Sohoj Dokan are coming soon. Follow on LinkedIn to catch the first one.</p>
+        </div>
       {%- endif %}
-    {%- else %}
-      <div class="blog-empty glass reveal">
-        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
-        <h2>First posts are on the way</h2>
-        <p>Write-ups on LLMs, applied ML research and building Sohoj Dokan are coming soon. Follow on LinkedIn to catch the first one.</p>
-      </div>
-    {%- endif %}
 
-      <div class="subscribe glass reveal">
-        <div>
-          <h3>Get new posts</h3>
-          <p>Follow on LinkedIn, where every new post is shared.</p>
-        </div>
-        <div class="subscribe-actions">
-          <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>&nbsp;Follow on LinkedIn</a>
+        <div class="subscribe card reveal">
+          <div>
+            <span class="section-label">[Stay in the loop]</span>
+            <h3>Get new posts</h3>
+            <p>Follow on LinkedIn, where every new post is shared.</p>
+          </div>
+          <a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" class="btn btn-primary">{% include icon.html name="linkedin" size=16 %}Follow on LinkedIn</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>

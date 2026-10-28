@@ -1,0 +1,45 @@
+{%- assign home = '/' | relative_url -%}
+  <div class="footer-wrap">
+    <footer class="footer-panel">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="{{ home }}" class="logo">Masruk<span>.</span></a>
+          <p>AI engineer and entrepreneur in Dhaka. Turning data into decisions, and models into impact.</p>
+          <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>[OPEN TO COLLABORATIONS]</span>
+        </div>
+        <div class="footer-col">
+          <h2>Navigate</h2>
+          <ul>
+            <li><a href="{{ home }}#about">About</a></li>
+            <li><a href="{{ home }}#experience">Experience</a></li>
+            <li><a href="{{ home }}#projects">Projects</a></li>
+            <li><a href="{{ home }}#research">Research</a></li>
+            <li><a href="{{ home }}#skills">Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>More</h2>
+          <ul>
+            <li><a href="{{ '/blog/' | relative_url }}">Writing</a></li>
+            <li><a href="{{ '/blog/feed.xml' | relative_url }}">RSS feed</a></li>
+            <li><a href="{{ '/assets/Masruk-Habib-CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV</a></li>
+            <li><a href="{{ home }}#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Elsewhere</h2>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://x.com/masruk_habib" target="_blank" rel="noopener">X</a></li>
+            <li><a href="https://github.com/MasrukHabib" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=author%3A%22Masruk+Habib%22" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://public.tableau.com/app/profile/masruk.habib" target="_blank" rel="noopener">Tableau Public</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">{{ site.time | date: '%Y' }}</span> Masruk Habib</p>
+        <p class="mono">DHAKA, BD // UTC+6</p>
+      </div>
+    </footer>
+  </div>

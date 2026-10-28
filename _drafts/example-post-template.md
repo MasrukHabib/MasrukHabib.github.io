@@ -10,7 +10,7 @@ image: https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1600&
 image_alt: "Abstract 3D render of the letters AI"
 ---
 
-The first paragraph is the hook. **Bold text** stands out in white, and [links](https://github.com/MasrukHabib) are cyan.
+The first paragraph is the hook. **Bold text** stands out in white, and [links](https://github.com/MasrukHabib) are underlined in amber.
 
 ## Each H2 becomes a table-of-contents entry
 
@@ -26,7 +26,7 @@ chunks = splitter.split_documents(docs)
 
 ## Quotes, lists and callouts
 
-> A blockquote renders with the gradient bar.
+> A blockquote renders with an amber bar.
 
 - Bullet lists use the same arrow markers as the rest of the site
 - Numbered lists work too

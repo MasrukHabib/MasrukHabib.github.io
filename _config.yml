@@ -22,12 +22,14 @@ defaults:
       type: posts
     values:
       layout: post
+      blog: true
+  - scope:
+      path: "blog"
+    values:
+      blog: true
 
 exclude:
   - README.md
+  - DESIGN.md
   - Gemfile
   - Gemfile.lock
-  - "01 Masruk Habib cv.pdf"
-  - Profile.pdf
-  - "github profile.jpg"
-  - "jim cover.jpg"
