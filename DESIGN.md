@@ -117,7 +117,7 @@ Examples: `[Features]` `[Pricing]` `[Foundation]` `[Achievements]`
 
 ## Components
 
-- **Navbar**: Fixed, transparent at top → `backdrop-filter: blur(16px)` + bottom border on scroll. Logo left, links centered at `text-body` opacity, primary CTA right
+- **Navbar**: Fixed, transparent at top → `backdrop-filter: blur(16px)` + bottom border on scroll. Logo left, links centered at `text-body` opacity, no CTA button (the CV download lives in the hero, About and Experience sections)
 - **Section Labels**: `[Label]` in monospace amber above every section heading — mandatory
 - **Hero Badge**: Small pill (`border-radius: 999px`) above the headline — icon + short tagline, dark bg, subtle border
 - **Feature Cards**: Large dark illustration/preview panel (~240px) taking the top of the card, title + description below. Not a small icon + text layout

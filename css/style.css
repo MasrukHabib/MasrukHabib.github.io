@@ -220,8 +220,7 @@ a.card:hover, .proj-card:hover, .exp-card:hover, .pub:hover, .skill-card:hover, 
   transition: color var(--dur-base) ease;
 }
 .nav-links a:hover, .nav-links a.active, .nav-links a[aria-current] { color: var(--text-primary); }
-.nav-cv { justify-self: end; }
-.nav-cv-mobile, .nav-toggle { display: none; }
+.nav-toggle { display: none; }
 
 /* ============================================================
    HERO
@@ -570,7 +569,6 @@ a.contact-card:hover strong { color: var(--accent-bright); }
 
 @media (max-width: 900px) {
   .nav-inner { grid-template-columns: 1fr auto; }
-  .nav-cv { display: none; }
   .nav-toggle {
     display: grid; place-items: center; width: 42px; height: 42px; justify-self: end;
     border-radius: var(--r-md); color: var(--text-primary); border: 1px solid var(--border-medium);
@@ -586,8 +584,6 @@ a.contact-card:hover strong { color: var(--accent-bright); }
   }
   .menu-open .nav-links { opacity: 1; visibility: visible; transform: none; }
   .nav-links a { padding: 16px 4px; font-size: 18px; border-bottom: 1px solid var(--border-subtle); border-radius: 0; }
-  .nav-cv-mobile { display: block; margin-top: 24px; }
-  .nav-links .nav-cv-mobile a { display: flex; padding: 14px 24px; font-size: 15px; border: 1px solid var(--accent); border-radius: var(--r-md); }
 }
 
 /* Minimal nav on the Writing pages: logo + About + Writing, never a hamburger */
