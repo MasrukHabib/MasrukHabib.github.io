@@ -590,6 +590,16 @@ a.contact-card:hover strong { color: var(--accent-bright); }
   .nav-links .nav-cv-mobile a { display: flex; padding: 14px 24px; font-size: 15px; border: 1px solid var(--accent); border-radius: var(--r-md); }
 }
 
+/* Minimal nav on the Writing pages: logo + About + Writing, never a hamburger */
+.nav-minimal .nav-inner { grid-template-columns: 1fr auto; }
+.nav-minimal .nav-links {
+  position: static; flex-direction: row; gap: 4px; padding: 0;
+  background: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+  opacity: 1; visibility: visible; transform: none; transition: none;
+}
+.nav-minimal .nav-links a { padding: 8px 14px; font-size: 14px; border-bottom: 0; border-radius: var(--r-md); }
+@media (max-width: 480px) { .nav-minimal .nav-links a { padding: 8px 10px; } }
+
 @media (max-width: 760px) {
   .container { padding-inline: 20px; }
   .section { padding-block: 96px; }

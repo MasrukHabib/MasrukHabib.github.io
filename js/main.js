@@ -17,6 +17,7 @@
   onScroll();
 
   const setMenu = (open) => {
+    if (!toggle) return; // the minimal Writing nav has no menu button
     nav.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
