@@ -255,6 +255,29 @@
 .resource-card small { font-family: var(--font-mono); font-size: 11px; color: var(--text-tertiary); }
 .resource-card .ext { color: var(--text-tertiary); }
 @media (max-width: 640px) { .resource-grid { grid-template-columns: 1fr; } }
+.resource-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 640px) { .resource-grid-3 { grid-template-columns: 1fr; } }
+
+/* data table on a card; scrolls sideways on narrow screens instead of squashing */
+.prose .table-wrap { overflow-x: auto; border-radius: var(--r-lg); background: var(--bg-card); box-shadow: var(--shadow-card); }
+.prose .table-wrap table { display: table; min-width: 520px; }
+.prose .table-wrap th, .prose .table-wrap td { padding: 13px 20px; vertical-align: top; }
+.prose .table-wrap th { font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); border-bottom-color: var(--border-medium); }
+.prose .table-wrap td:first-child { color: var(--text-primary); font-weight: 500; white-space: nowrap; }
+.prose .table-wrap tr:last-child td { border-bottom: 0; }
+@media (max-width: 480px) {
+  .prose .table-wrap table { min-width: 0; font-size: 14px; }
+  .prose .table-wrap th, .prose .table-wrap td { padding: 11px 12px; }
+  .prose .table-wrap td:first-child { white-space: normal; }
+}
+.pill { display: inline-block; padding: 1px 10px; border-radius: 999px; border: 1px solid var(--border-medium); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; white-space: nowrap; color: var(--text-body); }
+.pill-accent { color: var(--accent); border-color: var(--border-accent); background: var(--accent-subtle); }
+
+/* short lists that read better side by side */
+.prose ul.cols-2 { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+@media (max-width: 480px) { .prose ul.cols-2 { grid-template-columns: 1fr; } }
+
+.prose .project-item p.project-meta { margin-top: 10px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 
 .closing-card {
   position: relative; overflow: hidden; margin-top: 2.4em; padding: clamp(32px, 5vw, 48px) 24px; text-align: center;
