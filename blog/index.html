@@ -16,7 +16,7 @@ description: Deep dives on LLMs and RAG, plain-language research explainers, and
       <div class="container">
       {%- if site.posts.size > 0 %}
         {%- assign featured = site.posts.first %}
-        {%- assign words = featured.content | number_of_words %}
+        {%- assign words = featured.content | strip_html | number_of_words %}
         <a href="{{ featured.url | relative_url }}" class="post-featured card featured reveal" id="featured">
           {%- if featured.image %}
           <div class="post-media"><img src="{{ featured.image }}" alt="{{ featured.image_alt }}" onerror="this.parentNode.classList.add('img-dead')"><span class="proj-flag">Latest{% if featured.category %} // {{ featured.category }}{% endif %}</span></div>

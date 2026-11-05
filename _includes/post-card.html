@@ -1,5 +1,5 @@
 {%- assign p = include.post -%}
-{%- assign words = p.content | number_of_words -%}
+{%- assign words = p.content | strip_html | number_of_words -%}
         <a href="{{ p.url | relative_url }}" class="post-card card reveal{{ include.class }}" data-cat="{{ p.category }}">
           {%- if p.image %}
           <div class="post-media"><img src="{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy" onerror="this.parentNode.classList.add('img-dead')">{% if p.category %}<span class="proj-flag">{{ p.category }}</span>{% endif %}</div>

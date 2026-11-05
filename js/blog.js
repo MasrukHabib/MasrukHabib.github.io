@@ -87,4 +87,78 @@
     window.addEventListener("scroll", spy, { passive: true });
     spy();
   }
+
+  /* ---------- Article: animated figures (play on scroll, replay, tooltips) ---------- */
+  const figs = [...document.querySelectorAll(".prose .viz")];
+  if (figs.length) {
+    const motionOK = window.matchMedia("(prefers-reduced-motion: no-preference)").matches && "IntersectionObserver" in window;
+    const play = (f) => {
+      f.classList.remove("is-playing");
+      void f.getBoundingClientRect(); // restart the CSS animations
+      f.classList.add("is-playing");
+    };
+    const io = motionOK
+      ? new IntersectionObserver((entries) => entries.forEach((en) => {
+          if (en.isIntersecting) { en.target.classList.add("is-playing"); io.unobserve(en.target); }
+        }), { threshold: 0.3 })
+      : null;
+
+    figs.forEach((f) => {
+      if (io && f.querySelector(".a-in, .a-draw, .a-grow, .a-pop, .a-travel")) {
+        f.classList.add("armed");
+        io.observe(f);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "viz-replay";
+        btn.textContent = "↻ replay";
+        btn.setAttribute("aria-label", "Replay this animation");
+        btn.addEventListener("click", () => play(f));
+        f.querySelector(".viz-head")?.appendChild(btn);
+      }
+
+      // on narrow screens the figure scrolls sideways inside its card; say so
+      const sc = f.querySelector(".viz-scroll");
+      if (sc) {
+        const hint = document.createElement("p");
+        hint.className = "viz-hint";
+        hint.textContent = "Swipe sideways to see the whole figure →";
+        sc.before(hint);
+        const check = () => f.classList.toggle("is-scrollable", sc.scrollWidth > sc.clientWidth + 4);
+        check();
+        window.addEventListener("resize", check, { passive: true });
+      }
+
+      const marks = f.querySelectorAll("[data-tip]");
+      if (!marks.length) return;
+      const tip = document.createElement("div");
+      tip.className = "viz-tip";
+      tip.setAttribute("aria-hidden", "true"); // marks carry their own aria-label
+      f.appendChild(tip);
+      const show = (m, cx, cy) => {
+        const strong = document.createElement("strong");
+        strong.textContent = m.dataset.tip;
+        const sub = document.createElement("span");
+        sub.textContent = m.dataset.tipSub || "";
+        tip.replaceChildren(strong, sub);
+        const fr = f.getBoundingClientRect();
+        const r = m.getBoundingClientRect();
+        const x = (cx ?? r.left + r.width / 2) - fr.left;
+        const y = (cy ?? r.top) - fr.top;
+        let left = x + 14;
+        if (left + tip.offsetWidth > fr.width - 8) left = x - tip.offsetWidth - 14;
+        let top = y - tip.offsetHeight - 12;
+        if (top < 8) top = y + 18;
+        tip.style.left = Math.max(8, left) + "px";
+        tip.style.top = top + "px";
+        tip.classList.add("on");
+      };
+      const hide = () => tip.classList.remove("on");
+      marks.forEach((m) => {
+        m.addEventListener("pointermove", (ev) => show(m, ev.clientX, ev.clientY));
+        m.addEventListener("pointerleave", hide);
+        m.addEventListener("focus", () => show(m));
+        m.addEventListener("blur", hide);
+      });
+    });
+  }
 })();
