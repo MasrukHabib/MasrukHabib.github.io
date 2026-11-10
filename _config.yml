@@ -38,3 +38,4 @@ exclude:
   - DESIGN.md
   - Gemfile
   - Gemfile.lock
+  - assets/cv/IDLC-Finance  # job-specific CV, kept off the live site
