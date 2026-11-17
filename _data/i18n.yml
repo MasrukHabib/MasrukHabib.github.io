@@ -1,0 +1,93 @@
+# UI text for the two blog languages. Templates read it as site.data.i18n[lang].
+# English is the default; Bengali posts live in _posts/bn/ (see README).
+en:
+  name: English
+  skip: Skip to content
+  about: About
+  writing: Writing
+  lang_group: Choose language
+  lang_missing: This post isn't available in Bengali yet
+  all_posts: All posts
+  latest: Latest
+  min_read: MIN READ
+  read_article: Read article
+  role: Computer Engineer · Researcher
+  share_linkedin: Share on LinkedIn
+  share_x: Share on X
+  copy_link: Copy link
+  on_this_page: "[On this page]"
+  more_posts: More posts
+  previous: PREVIOUS
+  next: NEXT
+  label: "[Writing]"
+  hero_muted: Notes from
+  hero_bright: the lab.
+  filter_label: Filter posts by category
+  filter_all: All
+  search: Search posts...
+  search_label: Search posts
+  no_match: No posts match that search yet.
+  empty_title: First posts are on the way
+  empty_body: Write-ups on LLMs, applied ML research and building Sohoj Dokan are coming soon. Follow on LinkedIn to catch the first one.
+  sub_label: "[Stay in the loop]"
+  sub_title: Get new posts
+  sub_body: Follow on LinkedIn, where every new post is shared.
+  sub_button: Follow on LinkedIn
+  footer_blurb: Computer engineer and entrepreneur in Dhaka. Turning data into decisions, and models into impact.
+  footer_status: "[OPEN TO COLLABORATIONS]"
+  footer_navigate: Navigate
+  footer_more: More
+  footer_elsewhere: Elsewhere
+  experience: Experience
+  projects: Projects
+  research: Research
+  skills: Skills
+  download_cv: Download CV
+  contact: Contact
+  footer_place: DHAKA, BD // UTC+6
+
+bn:
+  name: বাংলা
+  skip: মূল লেখায় যান
+  about: পরিচিতি
+  writing: লেখালেখি
+  lang_group: ভাষা বেছে নিন
+  lang_missing: এই লেখার ইংরেজি সংস্করণ এখনো নেই
+  all_posts: সব লেখা
+  latest: সর্বশেষ
+  min_read: মিনিটের পড়া
+  read_article: পুরো লেখা পড়ুন
+  role: কম্পিউটার ইঞ্জিনিয়ার · গবেষক
+  share_linkedin: LinkedIn-এ শেয়ার করুন
+  share_x: X-এ শেয়ার করুন
+  copy_link: লিংক কপি করুন
+  on_this_page: "[এই লেখায়]"
+  more_posts: আরও লেখা
+  previous: আগের লেখা
+  next: পরের লেখা
+  label: "[লেখালেখি]"
+  hero_muted: ল্যাবের
+  hero_bright: খাতা থেকে।
+  filter_label: বিষয় অনুযায়ী লেখা বাছাই করুন
+  filter_all: সব
+  search: লেখা খুঁজুন...
+  search_label: লেখা খুঁজুন
+  no_match: এই খোঁজের সাথে মেলে এমন কোনো লেখা এখনো নেই।
+  empty_title: প্রথম লেখাগুলো আসছে
+  empty_body: LLM, ব্যবহারিক ML গবেষণা আর সহজ দোকান গড়ার অভিজ্ঞতা নিয়ে লেখা শিগগিরই আসছে। প্রথম লেখাটি পেতে LinkedIn-এ ফলো করুন।
+  sub_label: "[সাথে থাকুন]"
+  sub_title: নতুন লেখার খবর পান
+  sub_body: LinkedIn-এ ফলো করুন, প্রতিটি নতুন লেখা সেখানে শেয়ার করা হয়।
+  sub_button: LinkedIn-এ ফলো করুন
+  footer_blurb: ঢাকার একজন কম্পিউটার ইঞ্জিনিয়ার ও উদ্যোক্তা। ডেটাকে সিদ্ধান্তে, আর মডেলকে বাস্তব প্রভাবে রূপ দিই।
+  footer_status: "[সহযোগিতার জন্য প্রস্তুত]"
+  footer_navigate: পাতাগুলো
+  footer_more: আরও
+  footer_elsewhere: অন্য কোথাও
+  experience: অভিজ্ঞতা
+  projects: প্রজেক্ট
+  research: গবেষণা
+  skills: দক্ষতা
+  download_cv: CV ডাউনলোড
+  contact: যোগাযোগ
+  footer_place: ঢাকা, বাংলাদেশ // UTC+6

@@ -4,29 +4,29 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="{{ home }}" class="logo">Masruk<span>.</span></a>
-          <p>Computer engineer and entrepreneur in Dhaka. Turning data into decisions, and models into impact.</p>
-          <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>[OPEN TO COLLABORATIONS]</span>
+          <p>{{ t.footer_blurb }}</p>
+          <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>{{ t.footer_status }}</span>
         </div>
         <div class="footer-col">
-          <h2>Navigate</h2>
+          <h2>{{ t.footer_navigate }}</h2>
           <ul>
-            <li><a href="{{ home }}#about">About</a></li>
-            <li><a href="{{ home }}#experience">Experience</a></li>
-            <li><a href="{{ home }}#projects">Projects</a></li>
-            <li><a href="{{ home }}#research">Research</a></li>
-            <li><a href="{{ home }}#skills">Skills</a></li>
+            <li><a href="{{ home }}#about">{{ t.about }}</a></li>
+            <li><a href="{{ home }}#experience">{{ t.experience }}</a></li>
+            <li><a href="{{ home }}#projects">{{ t.projects }}</a></li>
+            <li><a href="{{ home }}#research">{{ t.research }}</a></li>
+            <li><a href="{{ home }}#skills">{{ t.skills }}</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h2>More</h2>
+          <h2>{{ t.footer_more }}</h2>
           <ul>
-            <li><a href="{{ '/blog/' | relative_url }}">Writing</a></li>
-            <li><a href="{{ '/assets/cv/Masruk-Habib-Resume.pdf' | relative_url }}?v=36321c35" target="_blank" rel="noopener">Download CV</a></li>
-            <li><a href="{{ home }}#contact">Contact</a></li>
+            <li><a href="{{ blog_url | default: '/blog/' | relative_url }}">{{ t.writing }}</a></li>
+            <li><a href="{{ '/assets/cv/Masruk-Habib-Resume.pdf' | relative_url }}?v=36321c35" target="_blank" rel="noopener">{{ t.download_cv }}</a></li>
+            <li><a href="{{ home }}#contact">{{ t.contact }}</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Elsewhere</h2>
+          <h2>{{ t.footer_elsewhere }}</h2>
           <ul>
             <li><a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="https://x.com/masruk_habib" target="_blank" rel="noopener">X</a></li>
@@ -38,7 +38,7 @@
       </div>
       <div class="footer-bottom">
         <p>© <span id="year">{{ site.time | date: '%Y' }}</span> Masruk Habib</p>
-        <p class="mono">DHAKA, BD // UTC+6</p>
+        <p class="mono">{{ t.footer_place }}</p>
       </div>
     </footer>
   </div>

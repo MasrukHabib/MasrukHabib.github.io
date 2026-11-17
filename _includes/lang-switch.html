@@ -1,0 +1,22 @@
+{%- comment -%} English / বাংলা switch for the Writing pages. Needs the variables from i18n.html. {%- endcomment -%}
+{%- if lang == "bn" -%}
+  {%- assign en_url = alt_url -%}{%- assign bn_url = page.url -%}
+{%- else -%}
+  {%- assign en_url = page.url -%}{%- assign bn_url = alt_url -%}
+{%- endif -%}
+      <div class="lang-switch" role="group" aria-label="{{ t.lang_group }}">
+        {%- if lang == "en" %}
+        <span lang="en" aria-current="true">EN</span>
+        {%- elsif en_url != "" %}
+        <a href="{{ en_url | relative_url }}" lang="en" hreflang="en" data-lang="en" aria-label="English">EN</a>
+        {%- else %}
+        <span lang="en" role="link" aria-disabled="true" tabindex="0" aria-label="English: {{ t.lang_missing }}" data-note="{{ t.lang_missing }}">EN</span>
+        {%- endif %}
+        {%- if lang == "bn" %}
+        <span lang="bn" aria-current="true">বাংলা</span>
+        {%- elsif bn_url != "" %}
+        <a href="{{ bn_url | relative_url }}" lang="bn" hreflang="bn" data-lang="bn">বাংলা</a>
+        {%- else %}
+        <span lang="bn" role="link" aria-disabled="true" tabindex="0" aria-label="বাংলা: {{ t.lang_missing }}" data-note="{{ t.lang_missing }}">বাংলা</span>
+        {%- endif %}
+      </div>

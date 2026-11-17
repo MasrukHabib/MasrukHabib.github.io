@@ -1,0 +1,9 @@
+{%- comment -%} Pass date= and lang=. Prints "OCT 28, 2026" or "২৮ অক্টোবর, ২০২৬" {%- endcomment -%}
+{%- if include.lang == "bn" -%}
+  {%- assign bn_months = "জানুয়ারি,ফেব্রুয়ারি,মার্চ,এপ্রিল,মে,জুন,জুলাই,আগস্ট,সেপ্টেম্বর,অক্টোবর,নভেম্বর,ডিসেম্বর" | split: "," -%}
+  {%- assign month_i = include.date | date: "%-m" | minus: 1 -%}
+  {%- capture bn_date %}{{ include.date | date: "%-d" }} {{ bn_months[month_i] }}, {{ include.date | date: "%Y" }}{% endcapture -%}
+  {%- include bn-digits.html n=bn_date -%}
+{%- else -%}
+  {{- include.date | date: "%b %-d, %Y" | upcase -}}
+{%- endif -%}

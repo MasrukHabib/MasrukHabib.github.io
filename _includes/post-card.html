@@ -1,13 +1,14 @@
 {%- assign p = include.post -%}
+{%- assign p_lang = p.lang | default: site.lang -%}
 {%- assign words = p.content | strip_html | number_of_words -%}
         <a href="{{ p.url | relative_url }}" class="post-card card reveal{{ include.class }}" data-cat="{{ p.category }}">
           {%- if p.image %}
           <div class="post-media"><img src="{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy" onerror="this.parentNode.classList.add('img-dead')">{% if p.category %}<span class="proj-flag">{{ p.category }}</span>{% endif %}</div>
           {%- endif %}
           <div class="post-body">
-            <p class="arch-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %-d, %Y" | upcase }}</time> // {{ words | divided_by: 200 | at_least: 1 }} MIN READ</p>
+            <p class="arch-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{% include date.html date=p.date lang=p_lang %}</time> // {% include read-time.html words=words lang=p_lang %}</p>
             <h3>{{ p.title }}</h3>
             <p>{{ p.excerpt | strip_html | strip | truncatewords: 28 }}</p>
-            <span class="text-link">Read article{% include icon.html name="arrow-right" px=14 %}</span>
+            <span class="text-link">{{ site.data.i18n[p_lang].read_article }}{% include icon.html name="arrow-right" px=14 %}</span>
           </div>
         </a>

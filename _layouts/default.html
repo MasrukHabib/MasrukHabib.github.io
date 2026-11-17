@@ -1,28 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+{%- include i18n.html %}
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0a0907" />
   <script>document.documentElement.classList.add("js")</script>
+  {%- if page.blog and page.collection != "posts" %}
+  {%- comment %} Writing listing: send readers who picked the other language straight to it {% endcomment %}
+  <script>try{if(localStorage.getItem("blog-lang")==="{{ alt_lang }}")location.replace("{{ alt_url | relative_url }}"+location.search)}catch(e){}</script>
+  {%- endif %}
   {%- if page.url == "/" %}
   {%- include head-home.html %}
   {%- else %}
   {% seo %}
   {%- endif %}
   {% feed_meta %}
+  {%- if page.blog and alt_url != "" %}
+  {%- if lang == "bn" %}{% assign en_href = alt_url %}{% assign bn_href = page.url %}{% else %}{% assign en_href = page.url %}{% assign bn_href = alt_url %}{% endif %}
+  <link rel="alternate" hreflang="en" href="{{ en_href | absolute_url }}" />
+  <link rel="alternate" hreflang="bn" href="{{ bn_href | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ en_href | absolute_url }}" />
+  {%- endif %}
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0907'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23d4a03c' stroke-opacity='.55' stroke-width='2'/%3E%3Ctext x='29' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='800' text-anchor='middle' fill='%23f0ebe0'%3EM%3C/text%3E%3Ccircle cx='47' cy='40' r='4' fill='%23d4a03c'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500{% if page.blog %}&family=Noto+Sans+Bengali:wght@400;500;600;700;800{% endif %}&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
   {%- if page.blog %}
   <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
   {%- endif %}
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">{{ t.skip }}</a>
 
   {% include nav.html %}
 

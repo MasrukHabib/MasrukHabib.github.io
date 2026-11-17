@@ -1,0 +1,28 @@
+{%- comment -%}
+  Sets the page language and its UI text. Include it at the top of any layout or page that needs them.
+  Assigns (they stay visible to the caller and to later includes):
+    lang      "en" or "bn"
+    t         UI strings from _data/i18n.yml
+    blog_url  the Writing listing in this language
+    alt_lang  the other language
+    alt_url   this page in the other language: the translated post, or the other listing.
+              Empty when a post has no translation yet.
+  A post and its translation share a filename: _posts/x.md and _posts/bn/x.md.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.i18n[lang] | default: site.data.i18n.en -%}
+{%- if lang == "bn" -%}
+  {%- assign alt_lang = "en" -%}
+  {%- assign blog_url = "/bn/blog/" -%}
+{%- else -%}
+  {%- assign alt_lang = "bn" -%}
+  {%- assign blog_url = "/blog/" -%}
+{%- endif -%}
+{%- assign alt_url = "" -%}
+{%- if page.collection == "posts" -%}
+  {%- for p in site.posts -%}
+    {%- if p.slug == page.slug and p.lang == alt_lang -%}{%- assign alt_url = p.url -%}{%- endif -%}
+  {%- endfor -%}
+{%- elsif page.blog -%}
+  {%- if alt_lang == "bn" -%}{%- assign alt_url = "/bn/blog/" -%}{%- else -%}{%- assign alt_url = "/blog/" -%}{%- endif -%}
+{%- endif -%}

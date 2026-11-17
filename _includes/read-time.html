@@ -1,0 +1,7 @@
+{%- comment -%} Pass words= and lang=. Prints "12 MIN READ" or "১২ মিনিটের পড়া" {%- endcomment -%}
+{%- assign mins = include.words | divided_by: 200 | at_least: 1 -%}
+{%- if include.lang == "bn" -%}
+  {%- include bn-digits.html n=mins %} {{ site.data.i18n.bn.min_read -}}
+{%- else -%}
+  {{- mins }} {{ site.data.i18n.en.min_read -}}
+{%- endif -%}

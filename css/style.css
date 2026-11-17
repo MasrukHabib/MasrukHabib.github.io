@@ -31,8 +31,8 @@
   --error: #b83c38;
 
   /* type */
-  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-sans: "Inter", "Noto Sans Bengali", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans Bengali", ui-monospace, "SFMono-Regular", Consolas, monospace;
   --text-display: clamp(52px, 7vw, 96px);
   --text-h2: clamp(28px, 3vw, 44px);
   --text-h3: clamp(17px, 1.6vw, 20px);
@@ -586,7 +586,7 @@ a.contact-card:hover strong { color: var(--accent-bright); }
   .nav-links a { padding: 16px 4px; font-size: 18px; border-bottom: 1px solid var(--border-subtle); border-radius: 0; }
 }
 
-/* Minimal nav on the Writing pages: logo + About + Writing, never a hamburger */
+/* Minimal nav on the Writing pages: logo + About + Writing + language switch, never a hamburger */
 .nav-minimal .nav-inner { grid-template-columns: 1fr auto; }
 .nav-minimal .nav-links {
   position: static; flex-direction: row; gap: 4px; padding: 0;

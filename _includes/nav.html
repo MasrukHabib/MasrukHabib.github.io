@@ -4,9 +4,10 @@
     <nav class="container nav-inner" aria-label="Main">
       <a href="{{ home }}" class="logo" aria-label="Masruk Habib, home">Masruk<span>.</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="{{ home }}#about">About</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}" aria-current="page">Writing</a></li>
+        <li class="nav-about"><a href="{{ home }}#about">{{ t.about }}</a></li>
+        <li><a href="{{ blog_url | relative_url }}" aria-current="page">{{ t.writing }}</a></li>
       </ul>
+      {%- include lang-switch.html %}
     </nav>
   </header>
 {%- else %}

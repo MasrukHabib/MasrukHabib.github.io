@@ -4,6 +4,22 @@
 (() => {
   "use strict";
 
+  const LANG = document.documentElement.lang === "bn" ? "bn" : "en";
+  const T = {
+    en: { copy: "copy", copied: "copied", replay: "↻ replay", replayLabel: "Replay this animation", swipe: "Swipe sideways to see the whole figure →" },
+    bn: { copy: "কপি", copied: "কপি হয়েছে", replay: "↻ আবার দেখুন", replayLabel: "অ্যানিমেশনটি আবার দেখুন", swipe: "পুরো চিত্রটি দেখতে পাশে সোয়াইপ করুন →" },
+  }[LANG];
+
+  /* ---------- Language switch: remember the choice, keep the reader's section ---------- */
+  // The listing pages read "blog-lang" in <head> and jump to the reader's language.
+  document.querySelectorAll(".lang-switch a[data-lang]").forEach((a) =>
+    a.addEventListener("click", () => {
+      try { localStorage.setItem("blog-lang", a.dataset.lang); } catch (e) { /* storage blocked */ }
+      // headings carry the same ids in both languages, so #section survives the switch
+      if (location.hash && document.querySelector(".article-wrap")) a.hash = location.hash;
+    })
+  );
+
   /* ---------- Listing: category filter + search ---------- */
   const grid = document.getElementById("post-grid");
   if (grid) {
@@ -47,11 +63,11 @@
     head.className = "code-head";
     head.innerHTML = '<div class="dots"><span></span><span></span><span></span></div><button type="button" class="code-copy"></button>';
     const btn = head.querySelector("button");
-    btn.textContent = lang === "plaintext" ? "copy" : lang + " · copy";
+    btn.textContent = lang === "plaintext" ? T.copy : lang + " · " + T.copy;
     btn.addEventListener("click", () => {
       navigator.clipboard?.writeText(block.querySelector("code").innerText).then(() => {
         const prev = btn.textContent;
-        btn.textContent = "copied";
+        btn.textContent = T.copied;
         setTimeout(() => (btn.textContent = prev), 1500);
       });
     });
@@ -110,8 +126,8 @@
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "viz-replay";
-        btn.textContent = "↻ replay";
-        btn.setAttribute("aria-label", "Replay this animation");
+        btn.textContent = T.replay;
+        btn.setAttribute("aria-label", T.replayLabel);
         btn.addEventListener("click", () => play(f));
         f.querySelector(".viz-head")?.appendChild(btn);
       }
@@ -121,7 +137,7 @@
       if (sc) {
         const hint = document.createElement("p");
         hint.className = "viz-hint";
-        hint.textContent = "Swipe sideways to see the whole figure →";
+        hint.textContent = T.swipe;
         sc.before(hint);
         const check = () => f.classList.toggle("is-scrollable", sc.scrollWidth > sc.clientWidth + 4);
         check();

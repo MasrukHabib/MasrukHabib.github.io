@@ -18,3 +18,21 @@ The matching Claude Code skill lives in `.claude/skills/dark-luxury-design/`.
 3. Commit and push. GitHub Pages builds it, adds it to `/blog/`, the homepage "Notes from the lab" section and the RSS feed.
 
 Files in `_drafts/` are never published.
+
+## English / বাংলা
+
+The Writing section has two languages. A switch in the blog nav moves between them, and the reader's choice is remembered for the listing.
+
+- English posts live in `_posts/` and publish at `/blog/<slug>/`.
+- Bengali posts live in `_posts/bn/` and publish at `/bn/blog/<slug>/`. The listing is `/bn/blog/`.
+- A translation **uses the same filename** as its English post (for example `_posts/2026-10-28-your-journey-into-machine-learning.md` and `_posts/bn/2026-10-28-your-journey-into-machine-learning.md`). That pairing is what links the two in the switch, so don't rename one without the other. A post with no twin shows the other language greyed out.
+- Don't set `lang` or `permalink` in a Bengali post. `_config.yml` sets both for everything in `_posts/bn/`.
+- Give each Bengali heading the English heading's id, on the line directly under it:
+
+  ```markdown
+  ## ১. মেশিন লার্নিং আসলে কী
+  {: id="1-understand-what-machine-learning-really-is"}
+  ```
+
+  Then a link to a section works in both languages, and switching language keeps the reader's place. Use exactly this `{: id="..."}` form: kramdown silently ignores `{#id}` and `{: #id}` when the id starts with a digit. The English id is the heading in lowercase, punctuation dropped, spaces turned into hyphens (or copy it from the English page's URL when you click a section in its table of contents).
+- UI text (nav, dates, "min read", buttons, footer) comes from `_data/i18n.yml`. The home page shows English posts only.

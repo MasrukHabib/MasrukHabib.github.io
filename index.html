@@ -579,7 +579,8 @@ layout: default
       </div>
     </section>
 
-    {%- if site.posts.size > 0 %}
+    {%- assign en_posts = site.posts | where: "lang", "en" %}
+    {%- if en_posts.size > 0 %}
     <!-- ================= WRITING ================= -->
     <section id="writing" class="section">
       <div class="container">
@@ -592,7 +593,7 @@ layout: default
           <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">All posts{% include icon.html name="arrow-right" px=16 %}</a>
         </div>
         <div class="post-grid">
-          {%- for post in site.posts limit: 3 %}
+          {%- for post in en_posts limit: 3 %}
             {%- include post-card.html post=post %}
           {%- endfor %}
         </div>

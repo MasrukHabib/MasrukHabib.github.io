@@ -28,10 +28,25 @@ defaults:
     values:
       layout: post
       blog: true
+      lang: en
+  # Bengali posts: same filename as the English post, inside _posts/bn/
+  - scope:
+      path: "_posts/bn"
+      type: posts
+    values:
+      lang: bn
+      locale: bn_BD
+      permalink: /bn/blog/:title/
   - scope:
       path: "blog"
     values:
       blog: true
+  - scope:
+      path: "bn"
+    values:
+      blog: true
+      lang: bn
+      locale: bn_BD
 
 exclude:
   - README.md
