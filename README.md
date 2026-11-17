@@ -14,7 +14,7 @@ The matching Claude Code skill lives in `.claude/skills/dark-luxury-design/`.
 ## Writing a blog post
 
 1. Copy `_drafts/example-post-template.md` to `_posts/YYYY-MM-DD-your-title.md`.
-2. Fill in the front matter (`title`, `category`, `tags`, `excerpt`, `image`) and write the post in Markdown.
+2. Fill in the front matter (`title`, `category`, `tags`, `excerpt`, `image`) and write the post in Markdown. For equations, add `math: true` and write LaTeX between `$$` signs (inline or on their own lines). Use `\mid` instead of a bare `|`, which kramdown reads as a table.
 3. Commit and push. GitHub Pages builds it, adds it to `/blog/`, the homepage "Notes from the lab" section and the RSS feed.
 
 Files in `_drafts/` are never published.

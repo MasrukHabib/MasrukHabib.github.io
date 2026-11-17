@@ -185,6 +185,9 @@ html[lang="bn"] .article-lede, html[lang="bn"] .prose blockquote { line-height: 
 .prose pre.highlight { margin: 0; padding: 18px 20px; overflow-x: auto; font-family: var(--font-mono); font-size: 14px; line-height: 1.7; color: #d8d0c0; }
 .prose pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
 /* show operators like <=> and -> as typed, not as font ligatures */
+/* math (KaTeX, posts with math: true) */
+.prose .katex { color: var(--text-primary); font-size: 1.08em; }
+.prose .katex-display { margin: 1.6em 0; padding: 4px 0; overflow-x: auto; overflow-y: hidden; }
 .prose code, .prose pre { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
 .highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp { color: #5f584c; font-style: italic; }
 .highlight .k, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kc, .highlight .kt, .highlight .ow { color: #d4a03c; }
@@ -425,6 +428,25 @@ html[lang="bn"] .article-lede, html[lang="bn"] .prose blockquote { line-height: 
 .viz .ok-badge { fill: rgba(61, 158, 92, 0.18); stroke: #3d9e5c; }
 .viz .ok-t { fill: #7cc896; font-size: 9.5px; }
 .viz .packet { fill: var(--accent-bright); }
+/* tokens, masks, matrices, memory and loss charts (fine-tuning post) */
+.viz .tk { fill: var(--text-primary); font-family: var(--font-mono); font-size: 9.5px; font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
+.viz .tk.dim { fill: #8a8070; }
+.viz .pad { fill: rgba(255, 248, 230, 0.02); stroke: rgba(255, 248, 230, 0.12); stroke-dasharray: 3 3; }
+.viz .att { fill: rgba(212, 160, 60, 0.75); }
+.viz .leak { fill: rgba(224, 115, 109, 0.7); }
+.viz .zone { fill: rgba(224, 115, 109, 0.06); }
+.viz .s2-line { stroke: #3987e5; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.viz .mk2 { fill: #3987e5; stroke: var(--bg-card); stroke-width: 2; }
+.viz .pt .mk2 { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-fast); }
+.viz .pt:hover .mk2, .viz .pt:focus-visible .mk2 { transform: scale(1.4); }
+.viz .m1 { fill: #c98500; }
+.viz .m2 { fill: #3987e5; }
+.viz .m3 { fill: #8f6fd1; }
+.viz .m4 { fill: #3d9e5c; }
+.viz .m5 { fill: #2b6e45; }
+.viz .m6 { fill: #e8b84e; }
+.viz .m7 { fill: #8a6a1f; }
+.viz .row:hover [class^="m"], .viz .row:focus-visible [class^="m"] { filter: brightness(1.2); }
 
 /* tooltip and data table */
 .viz-tip { position: absolute; z-index: 5; pointer-events: none; padding: 8px 11px; border-radius: 8px; background: #0e0c0a; box-shadow: 0 0 0 1px var(--border-medium), 0 8px 24px rgba(0, 0, 0, 0.5); font-size: 12px; line-height: 1.45; color: var(--text-body); max-width: 300px; opacity: 0; transform: translateY(4px); transition: opacity 0.12s, transform 0.12s; }

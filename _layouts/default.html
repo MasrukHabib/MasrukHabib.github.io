@@ -31,6 +31,12 @@
   {%- if page.blog %}
   <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
   {%- endif %}
+  {%- if page.math %}
+  {%- comment %} kramdown turns $$...$$ into \( \) inline and \[ \] blocks; KaTeX renders them {% endcomment %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.querySelector('.prose'),{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"></script>
+  {%- endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">{{ t.skip }}</a>
