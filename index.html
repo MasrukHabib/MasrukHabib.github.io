@@ -14,13 +14,13 @@ layout: default
         </h1>
         <p class="hero-lead reveal">
           I'm <strong>Masruk Habib</strong>, a computer engineer and entrepreneur in Dhaka. I design LLM and RAG systems,
-          machine-learning pipelines and data products, co-founded Sohoj Dokan, and publish my research at IEEE.
+          machine-learning pipelines and data products, and publish my research at IEEE.
         </p>
         <div class="hero-actions reveal">
           <a href="#projects" class="btn btn-primary">View my work{% include icon.html name="arrow-right" px=16 %}</a>
           <a href="{{ cv }}" target="_blank" rel="noopener" class="btn btn-secondary">{% include icon.html name="download" px=16 %}Download CV</a>
         </div>
-        <p class="hero-meta mono reveal">SOFTWARE ENGINEER @ GOSCURRY.AI // CO-FOUNDER @ SOHOJ DOKAN // DHAKA, BD</p>
+        <p class="hero-meta mono reveal">SOFTWARE ENGINEER @ GOSCURRY.AI // DHAKA, BD</p>
         <ul class="hero-socials reveal" aria-label="Profiles">
           <li><a href="https://www.linkedin.com/in/masruk-habib" target="_blank" rel="noopener" aria-label="LinkedIn">{% include icon.html name="linkedin" px=20 %}</a></li>
           <li><a href="https://x.com/masruk_habib" target="_blank" rel="noopener" aria-label="X">{% include icon.html name="x-brand" px=20 %}</a></li>
@@ -67,7 +67,7 @@ layout: default
             </picture>
             <div class="profile-id">
               <h3>Masruk Habib</h3>
-              <p class="arch-meta">CO-FOUNDER @ SOHOJ DOKAN // SOFTWARE ENGINEER @ GOSCURRY.AI // ENTREPRENEUR</p>
+              <p class="arch-meta">SOFTWARE ENGINEER @ GOSCURRY.AI // ENTREPRENEUR</p>
             </div>
             <a href="{{ cv }}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">{% include icon.html name="download" px=16 %}Download CV</a>
           </div>
@@ -81,14 +81,17 @@ layout: default
               <strong>Large Language Models</strong> and <strong>Retrieval-Augmented Generation</strong>, and I care just as
               much about turning that work into products people rely on.
             </p>
+            {% comment %} Co-Founder @ Sohoj Dokan paragraph, hidden from About. Remove this comment wrapper to show it again
+            (and change "I work as" below back to "Alongside that, I work as").
             <p>
               I'm the <strong>Co-Founder of <a href="https://sohojdokan.com" target="_blank" rel="noopener">Sohoj Dokan</a></strong>,
               an e-commerce and store-builder platform helping small businesses and Facebook-based sellers in Bangladesh
               take their shops online. I look after the company's day-to-day operations and contribute to parts of the
               platform's development.
             </p>
+            {% endcomment %}
             <p>
-              Alongside that, I work as a <strong>Software Engineer at GoScurry.ai</strong>, building
+              I work as a <strong>Software Engineer at GoScurry.ai</strong>, building
               AI-driven products with LLMs, RAG pipelines and intelligent automation. Before this, as a
               <strong>Data Analyst at Jatri</strong>, I turned sales, marketing, finance and supply-chain data into
               dashboards, automated reports and KPIs, and I shipped backend features for <strong>CRM Squirrel</strong> in Python.
