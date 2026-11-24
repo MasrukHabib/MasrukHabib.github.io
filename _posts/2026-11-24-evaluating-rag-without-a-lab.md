@@ -4,8 +4,8 @@ category: LLMs
 tags: [RAG, Evaluation, Retrieval, Testing, CI]
 excerpt: "No annotators, no GPU, no eval vendor. Just production logs, Postgres and an afternoon. How to build a RAG evaluation harness that answers one question: did this change make things worse?"
 description: "A practical guide to evaluating retrieval-augmented generation without a labelling team: a gold set built from production logs, unanswerable questions, paired comparisons with bootstrap intervals, per-slice results, CI gates, and an LLM judge calibrated with Cohen's kappa."
-image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop
-image_alt: "A laptop on a desk showing an analytics dashboard with line charts and KPI figures"
+image: https://images.unsplash.com/photo-1508437239324-d3cba279d4d0?q=80&w=1600&auto=format&fit=crop
+image_alt: "Black-and-white close-up of precision measuring instruments, a steel protractor with engraved degree marks, on a dark stone surface"
 ---
 
 My post on [production RAG with pgvector](/blog/production-rag-on-postgresql-with-pgvector/) ended with one piece of advice: start with the evaluation harness, even if it holds only fifty labelled queries. That post showed how to *score* retrieval. This one is about everything around the score: where the questions come from, how to tell a real change from noise, and how to stop a bad change before your users find it.
