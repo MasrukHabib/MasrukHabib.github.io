@@ -253,7 +253,7 @@ Two metrics that most teams skip earn the most in production.
 import re
 
 _CITE = re.compile(r"\[(\d+)\]")
-_WORD = re.compile(r"\w{4,}")  # crude: drops short function words
+_WORD = re.compile(r"[\w\u0980-\u09FF]{4,}")  # crude: skips short words; the range keeps Bengali words whole
 
 def claim_near(answer: str, marker: str) -> str:
     """The sentence that contains the citation marker."""
