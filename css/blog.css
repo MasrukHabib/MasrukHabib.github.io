@@ -458,6 +458,37 @@ html[lang="bn"] .article-lede, html[lang="bn"] .prose blockquote { line-height: 
 .prose .viz-data table { display: table; width: auto; margin-top: 8px; font-size: 13px; }
 .prose .viz-data th, .prose .viz-data td { padding: 6px 18px 6px 0; font-variant-numeric: tabular-nums; }
 
+/* graph diagrams: nodes, edges, matrix cells */
+.viz .gn { fill: #1e1b17; stroke: rgba(255, 248, 230, 0.3); stroke-width: 1.5; }
+.viz .gn-acc { fill: #342a19; stroke: var(--accent-bright); stroke-width: 1.5; }
+.viz .ge { stroke: rgba(255, 248, 230, 0.2); stroke-width: 1.5; fill: none; }
+.viz .ge-acc { stroke: var(--accent); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+.viz .gl { fill: var(--text-primary); font-size: 13px; font-weight: 600; text-anchor: middle; }
+.viz .gv { fill: var(--text-primary); font-family: var(--font-mono); font-size: 11px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+.viz .cell { fill: rgba(255, 248, 230, 0.03); stroke: rgba(255, 248, 230, 0.08); }
+.viz .cell-on { fill: var(--accent); }
+.viz .cell-hl { fill: none; stroke: var(--accent-bright); stroke-width: 1.5; }
+.viz .bad-t { fill: #e0736d; }
+.viz .ok-v { fill: #7cc896; }
+
+/* step-through figures: buttons under the figure walk it through stages (blog.js) */
+.viz-ctl { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.viz-ctl button {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; color: var(--text-body);
+  padding: 5px 12px; border-radius: var(--r-pill); border: 1px solid var(--border-subtle); background: none; cursor: pointer;
+  transition: color var(--dur-fast), border-color var(--dur-fast), background-color var(--dur-fast);
+}
+.viz-ctl button:hover, .viz-ctl button:focus-visible { color: var(--text-primary); border-color: var(--border-medium); }
+.viz-ctl button[aria-pressed="true"] { color: var(--accent-bright); border-color: var(--border-accent); background: var(--accent-subtle); }
+.prose .viz-note { margin-top: 12px; min-height: 3.3em; font-size: 15px; line-height: 1.65; color: var(--text-primary); }
+html:not(.js) .viz-ctl { display: none; }
+.viz [data-on].is-off { opacity: 0 !important; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .viz-steps.is-ready :is([data-on], [data-fill], [data-sw], [data-tx]) {
+    transition: opacity 0.45s ease, fill 0.8s ease, stroke-width 0.7s var(--ease-out), transform 0.9s var(--ease-out);
+  }
+}
+
 /* motion: armed figures wait hidden until they play */
 @media (prefers-reduced-motion: no-preference) {
   .viz.armed:not(.is-playing) :is(.a-in, .a-draw, .a-grow, .a-pop, .a-travel) { opacity: 0; }

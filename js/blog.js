@@ -6,8 +6,8 @@
 
   const LANG = document.documentElement.lang === "bn" ? "bn" : "en";
   const T = {
-    en: { copy: "copy", copied: "copied", replay: "↻ replay", replayLabel: "Replay this animation", swipe: "Swipe sideways to see the whole figure →" },
-    bn: { copy: "কপি", copied: "কপি হয়েছে", replay: "↻ আবার দেখুন", replayLabel: "অ্যানিমেশনটি আবার দেখুন", swipe: "পুরো চিত্রটি দেখতে পাশে সোয়াইপ করুন →" },
+    en: { copy: "copy", copied: "copied", replay: "↻ replay", replayLabel: "Replay this animation", play: "▶ play", playLabel: "Play every step from the start", swipe: "Swipe sideways to see the whole figure →" },
+    bn: { copy: "কপি", copied: "কপি হয়েছে", replay: "↻ আবার দেখুন", replayLabel: "অ্যানিমেশনটি আবার দেখুন", play: "▶ চালান", playLabel: "শুরু থেকে প্রতিটি ধাপ দেখুন", swipe: "পুরো চিত্রটি দেখতে পাশে সোয়াইপ করুন →" },
   }[LANG];
 
   /* ---------- Language switch: remember the choice, keep the reader's section ---------- */
@@ -120,7 +120,7 @@
       : null;
 
     figs.forEach((f) => {
-      if (io && f.querySelector(".a-in, .a-draw, .a-grow, .a-pop, .a-travel")) {
+      if (io && !f.classList.contains("viz-steps") && f.querySelector(".a-in, .a-draw, .a-grow, .a-pop, .a-travel")) {
         f.classList.add("armed");
         io.observe(f);
         const btn = document.createElement("button");
@@ -175,6 +175,79 @@
         m.addEventListener("focus", () => show(m));
         m.addEventListener("blur", hide);
       });
+    });
+
+    /* ---------- Step-through figures (.viz-steps) ----------
+       Buttons in .viz-ctl carry data-go="n" and data-note. Marks inside the figure react to the step:
+         data-on="0 2", "1-3" or "2+"   visible only on those steps
+         data-text / data-fill / data-sw / data-tx = JSON array, one value per step
+           (text content, fill colour, stroke width, translateX in px)
+       The markup itself shows the last step, so the figure reads correctly without JS. */
+    document.querySelectorAll(".prose .viz-steps").forEach((f) => {
+      const btns = [...f.querySelectorAll(".viz-ctl button[data-go]")];
+      const n = btns.length;
+      if (!n) return;
+      const note = f.querySelector(".viz-note");
+      const steps = (spec) => {
+        const s = new Set();
+        spec.trim().split(/\s+/).forEach((tok) => {
+          let m;
+          if ((m = tok.match(/^(\d+)\+$/))) for (let i = +m[1]; i < n; i++) s.add(i);
+          else if ((m = tok.match(/^(\d+)-(\d+)$/))) for (let i = +m[1]; i <= +m[2]; i++) s.add(i);
+          else if (tok) s.add(+tok);
+        });
+        return s;
+      };
+      const list = (v) => { try { return JSON.parse(v); } catch (e) { return null; } };
+      const marks = [...f.querySelectorAll("[data-on], [data-text], [data-fill], [data-sw], [data-tx]")].map((el) => ({
+        el,
+        on: el.dataset.on != null ? steps(el.dataset.on) : null,
+        text: list(el.dataset.text), fill: list(el.dataset.fill), sw: list(el.dataset.sw), tx: list(el.dataset.tx),
+      }));
+      let step = n - 1, timer = null, touched = false;
+      const go = (s) => {
+        step = s;
+        btns.forEach((b, i) => b.setAttribute("aria-pressed", String(i === s)));
+        marks.forEach((m) => {
+          if (m.on) m.el.classList.toggle("is-off", !m.on.has(s));
+          if (m.text) m.el.textContent = m.text[s];
+          if (m.fill) m.el.style.fill = m.fill[s];
+          if (m.sw) m.el.style.strokeWidth = m.sw[s];
+          if (m.tx) m.el.style.transform = "translateX(" + m.tx[s] + "px)";
+        });
+        if (note) note.textContent = btns[s].dataset.note || "";
+      };
+      const stop = () => { clearTimeout(timer); timer = null; };
+      const play = () => {
+        stop();
+        go(0);
+        const wait = +f.dataset.dur || 3200;
+        const next = () => { if (step < n - 1) timer = setTimeout(() => { go(step + 1); next(); }, wait); };
+        next();
+      };
+      btns.forEach((b, i) => b.addEventListener("click", () => { touched = true; stop(); go(i); }));
+
+      if (motionOK) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "viz-replay";
+        btn.textContent = T.play;
+        btn.setAttribute("aria-label", T.playLabel);
+        btn.addEventListener("click", () => { f.classList.add("is-playing"); play(); });
+        f.querySelector(".viz-head")?.appendChild(btn);
+        go(0);
+        // play once when the figure is well into view; stop if the reader takes over first
+        const watch = new IntersectionObserver((entries) => entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          watch.disconnect();
+          f.classList.add("is-playing");
+          if (!touched) play();
+        }), { threshold: 0.45 });
+        watch.observe(f);
+      } else {
+        go(n - 1);
+      }
+      requestAnimationFrame(() => f.classList.add("is-ready"));
     });
   }
 })();
